@@ -7,68 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F017C9F025BAFCE900B1CDF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017C9EF25BAFCE900B1CDF2 /* AppDelegate.swift */; };
-		F017C9F225BAFCE900B1CDF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017C9F125BAFCE900B1CDF2 /* SceneDelegate.swift */; };
-		F017C9F425BAFCE900B1CDF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017C9F325BAFCE900B1CDF2 /* ViewController.swift */; };
-		F017C9F725BAFCE900B1CDF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F017C9F525BAFCE900B1CDF2 /* Main.storyboard */; };
-		F017C9FA25BAFCE900B1CDF2 /* Criptonita.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F017C9F825BAFCE900B1CDF2 /* Criptonita.xcdatamodeld */; };
-		F017C9FC25BAFCEB00B1CDF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F017C9FB25BAFCEB00B1CDF2 /* Assets.xcassets */; };
-		F017C9FF25BAFCEB00B1CDF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F017C9FD25BAFCEB00B1CDF2 /* LaunchScreen.storyboard */; };
-		F017CA0A25BAFCEB00B1CDF2 /* CriptonitaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017CA0925BAFCEB00B1CDF2 /* CriptonitaTests.swift */; };
-		F017CA1525BAFCEB00B1CDF2 /* CriptonitaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017CA1425BAFCEB00B1CDF2 /* CriptonitaUITests.swift */; };
+		F017CA7B25BB0CDD00B1CDF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017CA7A25BB0CDD00B1CDF2 /* AppDelegate.swift */; };
+		F017CA7D25BB0CDD00B1CDF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017CA7C25BB0CDD00B1CDF2 /* SceneDelegate.swift */; };
+		F017CA7F25BB0CDD00B1CDF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017CA7E25BB0CDD00B1CDF2 /* ViewController.swift */; };
+		F017CA8225BB0CDD00B1CDF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F017CA8025BB0CDD00B1CDF2 /* Main.storyboard */; };
+		F017CA8525BB0CDD00B1CDF2 /* Criptonita.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F017CA8325BB0CDD00B1CDF2 /* Criptonita.xcdatamodeld */; };
+		F017CA8725BB0CDF00B1CDF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F017CA8625BB0CDF00B1CDF2 /* Assets.xcassets */; };
+		F017CA8A25BB0CDF00B1CDF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F017CA8825BB0CDF00B1CDF2 /* LaunchScreen.storyboard */; };
+		F017CA9525BB0CE000B1CDF2 /* CriptonitaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017CA9425BB0CE000B1CDF2 /* CriptonitaTests.swift */; };
+		F017CAA025BB0CE000B1CDF2 /* CriptonitaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017CA9F25BB0CE000B1CDF2 /* CriptonitaUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F017CA0625BAFCEB00B1CDF2 /* PBXContainerItemProxy */ = {
+		F017CA9125BB0CE000B1CDF2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F017C9E425BAFCE900B1CDF2 /* Project object */;
+			containerPortal = F017CA6F25BB0CDD00B1CDF2 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F017C9EB25BAFCE900B1CDF2;
+			remoteGlobalIDString = F017CA7625BB0CDD00B1CDF2;
 			remoteInfo = Criptonita;
 		};
-		F017CA1125BAFCEB00B1CDF2 /* PBXContainerItemProxy */ = {
+		F017CA9C25BB0CE000B1CDF2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F017C9E425BAFCE900B1CDF2 /* Project object */;
+			containerPortal = F017CA6F25BB0CDD00B1CDF2 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F017C9EB25BAFCE900B1CDF2;
+			remoteGlobalIDString = F017CA7625BB0CDD00B1CDF2;
 			remoteInfo = Criptonita;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F017C9EC25BAFCE900B1CDF2 /* Criptonita.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Criptonita.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F017C9EF25BAFCE900B1CDF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F017C9F125BAFCE900B1CDF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F017C9F325BAFCE900B1CDF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F017C9F625BAFCE900B1CDF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F017C9F925BAFCE900B1CDF2 /* Criptonita.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Criptonita.xcdatamodel; sourceTree = "<group>"; };
-		F017C9FB25BAFCEB00B1CDF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F017C9FE25BAFCEB00B1CDF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F017CA0025BAFCEB00B1CDF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F017CA0525BAFCEB00B1CDF2 /* CriptonitaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CriptonitaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F017CA0925BAFCEB00B1CDF2 /* CriptonitaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptonitaTests.swift; sourceTree = "<group>"; };
-		F017CA0B25BAFCEB00B1CDF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F017CA1025BAFCEB00B1CDF2 /* CriptonitaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CriptonitaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F017CA1425BAFCEB00B1CDF2 /* CriptonitaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptonitaUITests.swift; sourceTree = "<group>"; };
-		F017CA1625BAFCEB00B1CDF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F017CA7725BB0CDD00B1CDF2 /* Criptonita.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Criptonita.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F017CA7A25BB0CDD00B1CDF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F017CA7C25BB0CDD00B1CDF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F017CA7E25BB0CDD00B1CDF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F017CA8125BB0CDD00B1CDF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F017CA8425BB0CDD00B1CDF2 /* Criptonita.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Criptonita.xcdatamodel; sourceTree = "<group>"; };
+		F017CA8625BB0CDF00B1CDF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F017CA8925BB0CDF00B1CDF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F017CA8B25BB0CDF00B1CDF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F017CA9025BB0CE000B1CDF2 /* CriptonitaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CriptonitaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F017CA9425BB0CE000B1CDF2 /* CriptonitaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptonitaTests.swift; sourceTree = "<group>"; };
+		F017CA9625BB0CE000B1CDF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F017CA9B25BB0CE000B1CDF2 /* CriptonitaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CriptonitaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F017CA9F25BB0CE000B1CDF2 /* CriptonitaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptonitaUITests.swift; sourceTree = "<group>"; };
+		F017CAA125BB0CE000B1CDF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F017C9E925BAFCE900B1CDF2 /* Frameworks */ = {
+		F017CA7425BB0CDD00B1CDF2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F017CA0225BAFCEB00B1CDF2 /* Frameworks */ = {
+		F017CA8D25BB0CE000B1CDF2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F017CA0D25BAFCEB00B1CDF2 /* Frameworks */ = {
+		F017CA9825BB0CE000B1CDF2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -78,69 +78,125 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F017C9E325BAFCE900B1CDF2 = {
+		F017CA6E25BB0CDD00B1CDF2 = {
 			isa = PBXGroup;
 			children = (
-				F017C9EE25BAFCE900B1CDF2 /* Criptonita */,
-				F017CA0825BAFCEB00B1CDF2 /* CriptonitaTests */,
-				F017CA1325BAFCEB00B1CDF2 /* CriptonitaUITests */,
-				F017C9ED25BAFCE900B1CDF2 /* Products */,
+				F017CA7925BB0CDD00B1CDF2 /* Criptonita */,
+				F017CA9325BB0CE000B1CDF2 /* CriptonitaTests */,
+				F017CA9E25BB0CE000B1CDF2 /* CriptonitaUITests */,
+				F017CA7825BB0CDD00B1CDF2 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F017C9ED25BAFCE900B1CDF2 /* Products */ = {
+		F017CA7825BB0CDD00B1CDF2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F017C9EC25BAFCE900B1CDF2 /* Criptonita.app */,
-				F017CA0525BAFCEB00B1CDF2 /* CriptonitaTests.xctest */,
-				F017CA1025BAFCEB00B1CDF2 /* CriptonitaUITests.xctest */,
+				F017CA7725BB0CDD00B1CDF2 /* Criptonita.app */,
+				F017CA9025BB0CE000B1CDF2 /* CriptonitaTests.xctest */,
+				F017CA9B25BB0CE000B1CDF2 /* CriptonitaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F017C9EE25BAFCE900B1CDF2 /* Criptonita */ = {
+		F017CA7925BB0CDD00B1CDF2 /* Criptonita */ = {
 			isa = PBXGroup;
 			children = (
-				F017C9EF25BAFCE900B1CDF2 /* AppDelegate.swift */,
-				F017C9F125BAFCE900B1CDF2 /* SceneDelegate.swift */,
-				F017C9F325BAFCE900B1CDF2 /* ViewController.swift */,
-				F017C9F525BAFCE900B1CDF2 /* Main.storyboard */,
-				F017C9FB25BAFCEB00B1CDF2 /* Assets.xcassets */,
-				F017C9FD25BAFCEB00B1CDF2 /* LaunchScreen.storyboard */,
-				F017CA0025BAFCEB00B1CDF2 /* Info.plist */,
-				F017C9F825BAFCE900B1CDF2 /* Criptonita.xcdatamodeld */,
+				F017CAB725BB0D2F00B1CDF2 /* Aplication */,
+				F017CAB625BB0D2700B1CDF2 /* Views */,
+				F017CAB525BB0D1F00B1CDF2 /* ViewModels */,
+				F017CAB425BB0D1800B1CDF2 /* Models */,
+				F017CAB325BB0D1100B1CDF2 /* Core */,
+				F017CAB125BB0D0400B1CDF2 /* Helper */,
+				F017CAB025BB0CEA00B1CDF2 /* Resources */,
+				F017CA8025BB0CDD00B1CDF2 /* Main.storyboard */,
+				F017CA8625BB0CDF00B1CDF2 /* Assets.xcassets */,
+				F017CA8B25BB0CDF00B1CDF2 /* Info.plist */,
+				F017CA8325BB0CDD00B1CDF2 /* Criptonita.xcdatamodeld */,
 			);
 			path = Criptonita;
 			sourceTree = "<group>";
 		};
-		F017CA0825BAFCEB00B1CDF2 /* CriptonitaTests */ = {
+		F017CA9325BB0CE000B1CDF2 /* CriptonitaTests */ = {
 			isa = PBXGroup;
 			children = (
-				F017CA0925BAFCEB00B1CDF2 /* CriptonitaTests.swift */,
-				F017CA0B25BAFCEB00B1CDF2 /* Info.plist */,
+				F017CA9425BB0CE000B1CDF2 /* CriptonitaTests.swift */,
+				F017CA9625BB0CE000B1CDF2 /* Info.plist */,
 			);
 			path = CriptonitaTests;
 			sourceTree = "<group>";
 		};
-		F017CA1325BAFCEB00B1CDF2 /* CriptonitaUITests */ = {
+		F017CA9E25BB0CE000B1CDF2 /* CriptonitaUITests */ = {
 			isa = PBXGroup;
 			children = (
-				F017CA1425BAFCEB00B1CDF2 /* CriptonitaUITests.swift */,
-				F017CA1625BAFCEB00B1CDF2 /* Info.plist */,
+				F017CA9F25BB0CE000B1CDF2 /* CriptonitaUITests.swift */,
+				F017CAA125BB0CE000B1CDF2 /* Info.plist */,
 			);
 			path = CriptonitaUITests;
+			sourceTree = "<group>";
+		};
+		F017CAB025BB0CEA00B1CDF2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F017CAB125BB0D0400B1CDF2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		F017CAB325BB0D1100B1CDF2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F017CAB425BB0D1800B1CDF2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F017CAB525BB0D1F00B1CDF2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F017CAB625BB0D2700B1CDF2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F017CA7E25BB0CDD00B1CDF2 /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F017CAB725BB0D2F00B1CDF2 /* Aplication */ = {
+			isa = PBXGroup;
+			children = (
+				F017CA7A25BB0CDD00B1CDF2 /* AppDelegate.swift */,
+				F017CA7C25BB0CDD00B1CDF2 /* SceneDelegate.swift */,
+				F017CA8825BB0CDF00B1CDF2 /* LaunchScreen.storyboard */,
+			);
+			path = Aplication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F017C9EB25BAFCE900B1CDF2 /* Criptonita */ = {
+		F017CA7625BB0CDD00B1CDF2 /* Criptonita */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F017CA1925BAFCEB00B1CDF2 /* Build configuration list for PBXNativeTarget "Criptonita" */;
+			buildConfigurationList = F017CAA425BB0CE000B1CDF2 /* Build configuration list for PBXNativeTarget "Criptonita" */;
 			buildPhases = (
-				F017C9E825BAFCE900B1CDF2 /* Sources */,
-				F017C9E925BAFCE900B1CDF2 /* Frameworks */,
-				F017C9EA25BAFCE900B1CDF2 /* Resources */,
+				F017CA7325BB0CDD00B1CDF2 /* Sources */,
+				F017CA7425BB0CDD00B1CDF2 /* Frameworks */,
+				F017CA7525BB0CDD00B1CDF2 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -148,68 +204,68 @@
 			);
 			name = Criptonita;
 			productName = Criptonita;
-			productReference = F017C9EC25BAFCE900B1CDF2 /* Criptonita.app */;
+			productReference = F017CA7725BB0CDD00B1CDF2 /* Criptonita.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F017CA0425BAFCEB00B1CDF2 /* CriptonitaTests */ = {
+		F017CA8F25BB0CE000B1CDF2 /* CriptonitaTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F017CA1C25BAFCEB00B1CDF2 /* Build configuration list for PBXNativeTarget "CriptonitaTests" */;
+			buildConfigurationList = F017CAA725BB0CE000B1CDF2 /* Build configuration list for PBXNativeTarget "CriptonitaTests" */;
 			buildPhases = (
-				F017CA0125BAFCEB00B1CDF2 /* Sources */,
-				F017CA0225BAFCEB00B1CDF2 /* Frameworks */,
-				F017CA0325BAFCEB00B1CDF2 /* Resources */,
+				F017CA8C25BB0CE000B1CDF2 /* Sources */,
+				F017CA8D25BB0CE000B1CDF2 /* Frameworks */,
+				F017CA8E25BB0CE000B1CDF2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F017CA0725BAFCEB00B1CDF2 /* PBXTargetDependency */,
+				F017CA9225BB0CE000B1CDF2 /* PBXTargetDependency */,
 			);
 			name = CriptonitaTests;
 			productName = CriptonitaTests;
-			productReference = F017CA0525BAFCEB00B1CDF2 /* CriptonitaTests.xctest */;
+			productReference = F017CA9025BB0CE000B1CDF2 /* CriptonitaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F017CA0F25BAFCEB00B1CDF2 /* CriptonitaUITests */ = {
+		F017CA9A25BB0CE000B1CDF2 /* CriptonitaUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F017CA1F25BAFCEB00B1CDF2 /* Build configuration list for PBXNativeTarget "CriptonitaUITests" */;
+			buildConfigurationList = F017CAAA25BB0CE000B1CDF2 /* Build configuration list for PBXNativeTarget "CriptonitaUITests" */;
 			buildPhases = (
-				F017CA0C25BAFCEB00B1CDF2 /* Sources */,
-				F017CA0D25BAFCEB00B1CDF2 /* Frameworks */,
-				F017CA0E25BAFCEB00B1CDF2 /* Resources */,
+				F017CA9725BB0CE000B1CDF2 /* Sources */,
+				F017CA9825BB0CE000B1CDF2 /* Frameworks */,
+				F017CA9925BB0CE000B1CDF2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F017CA1225BAFCEB00B1CDF2 /* PBXTargetDependency */,
+				F017CA9D25BB0CE000B1CDF2 /* PBXTargetDependency */,
 			);
 			name = CriptonitaUITests;
 			productName = CriptonitaUITests;
-			productReference = F017CA1025BAFCEB00B1CDF2 /* CriptonitaUITests.xctest */;
+			productReference = F017CA9B25BB0CE000B1CDF2 /* CriptonitaUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F017C9E425BAFCE900B1CDF2 /* Project object */ = {
+		F017CA6F25BB0CDD00B1CDF2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
-					F017C9EB25BAFCE900B1CDF2 = {
+					F017CA7625BB0CDD00B1CDF2 = {
 						CreatedOnToolsVersion = 12.3;
 					};
-					F017CA0425BAFCEB00B1CDF2 = {
+					F017CA8F25BB0CE000B1CDF2 = {
 						CreatedOnToolsVersion = 12.3;
-						TestTargetID = F017C9EB25BAFCE900B1CDF2;
+						TestTargetID = F017CA7625BB0CDD00B1CDF2;
 					};
-					F017CA0F25BAFCEB00B1CDF2 = {
+					F017CA9A25BB0CE000B1CDF2 = {
 						CreatedOnToolsVersion = 12.3;
-						TestTargetID = F017C9EB25BAFCE900B1CDF2;
+						TestTargetID = F017CA7625BB0CDD00B1CDF2;
 					};
 				};
 			};
-			buildConfigurationList = F017C9E725BAFCE900B1CDF2 /* Build configuration list for PBXProject "Criptonita" */;
+			buildConfigurationList = F017CA7225BB0CDD00B1CDF2 /* Build configuration list for PBXProject "Criptonita" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -217,37 +273,37 @@
 				en,
 				Base,
 			);
-			mainGroup = F017C9E325BAFCE900B1CDF2;
-			productRefGroup = F017C9ED25BAFCE900B1CDF2 /* Products */;
+			mainGroup = F017CA6E25BB0CDD00B1CDF2;
+			productRefGroup = F017CA7825BB0CDD00B1CDF2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F017C9EB25BAFCE900B1CDF2 /* Criptonita */,
-				F017CA0425BAFCEB00B1CDF2 /* CriptonitaTests */,
-				F017CA0F25BAFCEB00B1CDF2 /* CriptonitaUITests */,
+				F017CA7625BB0CDD00B1CDF2 /* Criptonita */,
+				F017CA8F25BB0CE000B1CDF2 /* CriptonitaTests */,
+				F017CA9A25BB0CE000B1CDF2 /* CriptonitaUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F017C9EA25BAFCE900B1CDF2 /* Resources */ = {
+		F017CA7525BB0CDD00B1CDF2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F017C9FF25BAFCEB00B1CDF2 /* LaunchScreen.storyboard in Resources */,
-				F017C9FC25BAFCEB00B1CDF2 /* Assets.xcassets in Resources */,
-				F017C9F725BAFCE900B1CDF2 /* Main.storyboard in Resources */,
+				F017CA8A25BB0CDF00B1CDF2 /* LaunchScreen.storyboard in Resources */,
+				F017CA8725BB0CDF00B1CDF2 /* Assets.xcassets in Resources */,
+				F017CA8225BB0CDD00B1CDF2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F017CA0325BAFCEB00B1CDF2 /* Resources */ = {
+		F017CA8E25BB0CE000B1CDF2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F017CA0E25BAFCEB00B1CDF2 /* Resources */ = {
+		F017CA9925BB0CE000B1CDF2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -257,61 +313,61 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F017C9E825BAFCE900B1CDF2 /* Sources */ = {
+		F017CA7325BB0CDD00B1CDF2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F017C9FA25BAFCE900B1CDF2 /* Criptonita.xcdatamodeld in Sources */,
-				F017C9F425BAFCE900B1CDF2 /* ViewController.swift in Sources */,
-				F017C9F025BAFCE900B1CDF2 /* AppDelegate.swift in Sources */,
-				F017C9F225BAFCE900B1CDF2 /* SceneDelegate.swift in Sources */,
+				F017CA8525BB0CDD00B1CDF2 /* Criptonita.xcdatamodeld in Sources */,
+				F017CA7F25BB0CDD00B1CDF2 /* ViewController.swift in Sources */,
+				F017CA7B25BB0CDD00B1CDF2 /* AppDelegate.swift in Sources */,
+				F017CA7D25BB0CDD00B1CDF2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F017CA0125BAFCEB00B1CDF2 /* Sources */ = {
+		F017CA8C25BB0CE000B1CDF2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F017CA0A25BAFCEB00B1CDF2 /* CriptonitaTests.swift in Sources */,
+				F017CA9525BB0CE000B1CDF2 /* CriptonitaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F017CA0C25BAFCEB00B1CDF2 /* Sources */ = {
+		F017CA9725BB0CE000B1CDF2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F017CA1525BAFCEB00B1CDF2 /* CriptonitaUITests.swift in Sources */,
+				F017CAA025BB0CE000B1CDF2 /* CriptonitaUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F017CA0725BAFCEB00B1CDF2 /* PBXTargetDependency */ = {
+		F017CA9225BB0CE000B1CDF2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F017C9EB25BAFCE900B1CDF2 /* Criptonita */;
-			targetProxy = F017CA0625BAFCEB00B1CDF2 /* PBXContainerItemProxy */;
+			target = F017CA7625BB0CDD00B1CDF2 /* Criptonita */;
+			targetProxy = F017CA9125BB0CE000B1CDF2 /* PBXContainerItemProxy */;
 		};
-		F017CA1225BAFCEB00B1CDF2 /* PBXTargetDependency */ = {
+		F017CA9D25BB0CE000B1CDF2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F017C9EB25BAFCE900B1CDF2 /* Criptonita */;
-			targetProxy = F017CA1125BAFCEB00B1CDF2 /* PBXContainerItemProxy */;
+			target = F017CA7625BB0CDD00B1CDF2 /* Criptonita */;
+			targetProxy = F017CA9C25BB0CE000B1CDF2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F017C9F525BAFCE900B1CDF2 /* Main.storyboard */ = {
+		F017CA8025BB0CDD00B1CDF2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F017C9F625BAFCE900B1CDF2 /* Base */,
+				F017CA8125BB0CDD00B1CDF2 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		F017C9FD25BAFCEB00B1CDF2 /* LaunchScreen.storyboard */ = {
+		F017CA8825BB0CDF00B1CDF2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F017C9FE25BAFCEB00B1CDF2 /* Base */,
+				F017CA8925BB0CDF00B1CDF2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -319,7 +375,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F017CA1725BAFCEB00B1CDF2 /* Debug */ = {
+		F017CAA225BB0CE000B1CDF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -380,7 +436,7 @@
 			};
 			name = Debug;
 		};
-		F017CA1825BAFCEB00B1CDF2 /* Release */ = {
+		F017CAA325BB0CE000B1CDF2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -435,7 +491,7 @@
 			};
 			name = Release;
 		};
-		F017CA1A25BAFCEB00B1CDF2 /* Debug */ = {
+		F017CAA525BB0CE000B1CDF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -453,7 +509,7 @@
 			};
 			name = Debug;
 		};
-		F017CA1B25BAFCEB00B1CDF2 /* Release */ = {
+		F017CAA625BB0CE000B1CDF2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -471,7 +527,7 @@
 			};
 			name = Release;
 		};
-		F017CA1D25BAFCEB00B1CDF2 /* Debug */ = {
+		F017CAA825BB0CE000B1CDF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -492,7 +548,7 @@
 			};
 			name = Debug;
 		};
-		F017CA1E25BAFCEB00B1CDF2 /* Release */ = {
+		F017CAA925BB0CE000B1CDF2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -513,7 +569,7 @@
 			};
 			name = Release;
 		};
-		F017CA2025BAFCEB00B1CDF2 /* Debug */ = {
+		F017CAAB25BB0CE000B1CDF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -532,7 +588,7 @@
 			};
 			name = Debug;
 		};
-		F017CA2125BAFCEB00B1CDF2 /* Release */ = {
+		F017CAAC25BB0CE000B1CDF2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -554,38 +610,38 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F017C9E725BAFCE900B1CDF2 /* Build configuration list for PBXProject "Criptonita" */ = {
+		F017CA7225BB0CDD00B1CDF2 /* Build configuration list for PBXProject "Criptonita" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F017CA1725BAFCEB00B1CDF2 /* Debug */,
-				F017CA1825BAFCEB00B1CDF2 /* Release */,
+				F017CAA225BB0CE000B1CDF2 /* Debug */,
+				F017CAA325BB0CE000B1CDF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F017CA1925BAFCEB00B1CDF2 /* Build configuration list for PBXNativeTarget "Criptonita" */ = {
+		F017CAA425BB0CE000B1CDF2 /* Build configuration list for PBXNativeTarget "Criptonita" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F017CA1A25BAFCEB00B1CDF2 /* Debug */,
-				F017CA1B25BAFCEB00B1CDF2 /* Release */,
+				F017CAA525BB0CE000B1CDF2 /* Debug */,
+				F017CAA625BB0CE000B1CDF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F017CA1C25BAFCEB00B1CDF2 /* Build configuration list for PBXNativeTarget "CriptonitaTests" */ = {
+		F017CAA725BB0CE000B1CDF2 /* Build configuration list for PBXNativeTarget "CriptonitaTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F017CA1D25BAFCEB00B1CDF2 /* Debug */,
-				F017CA1E25BAFCEB00B1CDF2 /* Release */,
+				F017CAA825BB0CE000B1CDF2 /* Debug */,
+				F017CAA925BB0CE000B1CDF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F017CA1F25BAFCEB00B1CDF2 /* Build configuration list for PBXNativeTarget "CriptonitaUITests" */ = {
+		F017CAAA25BB0CE000B1CDF2 /* Build configuration list for PBXNativeTarget "CriptonitaUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F017CA2025BAFCEB00B1CDF2 /* Debug */,
-				F017CA2125BAFCEB00B1CDF2 /* Release */,
+				F017CAAB25BB0CE000B1CDF2 /* Debug */,
+				F017CAAC25BB0CE000B1CDF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -593,17 +649,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F017C9F825BAFCE900B1CDF2 /* Criptonita.xcdatamodeld */ = {
+		F017CA8325BB0CDD00B1CDF2 /* Criptonita.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F017C9F925BAFCE900B1CDF2 /* Criptonita.xcdatamodel */,
+				F017CA8425BB0CDD00B1CDF2 /* Criptonita.xcdatamodel */,
 			);
-			currentVersion = F017C9F925BAFCE900B1CDF2 /* Criptonita.xcdatamodel */;
+			currentVersion = F017CA8425BB0CDD00B1CDF2 /* Criptonita.xcdatamodel */;
 			path = Criptonita.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = F017C9E425BAFCE900B1CDF2 /* Project object */;
+	rootObject = F017CA6F25BB0CDD00B1CDF2 /* Project object */;
 }
