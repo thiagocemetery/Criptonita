@@ -1,16 +1,29 @@
 PODS:
   - SnapKit (5.0.1)
+  - TelaDeDetalhes (0.1.0):
+    - SnapKit
 
 DEPENDENCIES:
   - SnapKit (~> 5.0.0)
+  - TelaDeDetalhes (from `https://github.com/bittencourthiago/TelaDeDetalhes.git`)
 
 SPEC REPOS:
   trunk:
     - SnapKit
 
+EXTERNAL SOURCES:
+  TelaDeDetalhes:
+    :git: https://github.com/bittencourthiago/TelaDeDetalhes.git
+
+CHECKOUT OPTIONS:
+  TelaDeDetalhes:
+    :commit: 4784a6b465fcecb0556eefc18e04b8ba7d17db77
+    :git: https://github.com/bittencourthiago/TelaDeDetalhes.git
+
 SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  TelaDeDetalhes: 7268485ca947ffa3bbddcf7e400f2abcb78fae49
 
-PODFILE CHECKSUM: b6feb8cd18574e444e40052c0fbac7f5405a2abf
+PODFILE CHECKSUM: 4905974ce2c1aeb84aaf68ef246686b428d0fec5
 
 COCOAPODS: 1.10.1

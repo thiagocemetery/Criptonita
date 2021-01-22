@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,6 @@
 		77CB0343776E9264BE6D155F /* Pods_Criptonita.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC0431A6F73C30A165DCE8E /* Pods_Criptonita.framework */; };
 		A424659AD444FA897D544731 /* Pods_Criptonita_CriptonitaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5233A9865D5FFFEAF118F74 /* Pods_Criptonita_CriptonitaUITests.framework */; };
 		F017CA7B25BB0CDD00B1CDF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017CA7A25BB0CDD00B1CDF2 /* AppDelegate.swift */; };
-		F017CA7D25BB0CDD00B1CDF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017CA7C25BB0CDD00B1CDF2 /* SceneDelegate.swift */; };
 		F017CA7F25BB0CDD00B1CDF2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017CA7E25BB0CDD00B1CDF2 /* HomeViewController.swift */; };
 		F017CA8225BB0CDD00B1CDF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F017CA8025BB0CDD00B1CDF2 /* Main.storyboard */; };
 		F017CA8525BB0CDD00B1CDF2 /* Criptonita.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F017CA8325BB0CDD00B1CDF2 /* Criptonita.xcdatamodeld */; };
@@ -20,6 +19,7 @@
 		F017CA9525BB0CE000B1CDF2 /* CriptonitaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017CA9425BB0CE000B1CDF2 /* CriptonitaTests.swift */; };
 		F017CAA025BB0CE000B1CDF2 /* CriptonitaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017CA9F25BB0CE000B1CDF2 /* CriptonitaUITests.swift */; };
 		F017CABF25BB0EEB00B1CDF2 /* ViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017CABE25BB0EEB00B1CDF2 /* ViewConfiguration.swift */; };
+		F017CB8925BB52B200B1CDF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017CB8825BB52B200B1CDF2 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,6 @@
 		A618678C997A39BFA514AD2E /* Pods-CriptonitaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CriptonitaTests.release.xcconfig"; path = "Target Support Files/Pods-CriptonitaTests/Pods-CriptonitaTests.release.xcconfig"; sourceTree = "<group>"; };
 		F017CA7725BB0CDD00B1CDF2 /* Criptonita.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Criptonita.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F017CA7A25BB0CDD00B1CDF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F017CA7C25BB0CDD00B1CDF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F017CA7E25BB0CDD00B1CDF2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F017CA8125BB0CDD00B1CDF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F017CA8425BB0CDD00B1CDF2 /* Criptonita.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Criptonita.xcdatamodel; sourceTree = "<group>"; };
@@ -64,6 +63,7 @@
 		F017CA9F25BB0CE000B1CDF2 /* CriptonitaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptonitaUITests.swift; sourceTree = "<group>"; };
 		F017CAA125BB0CE000B1CDF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F017CABE25BB0EEB00B1CDF2 /* ViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
+		F017CB8825BB52B200B1CDF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = "../../../../../../.Trash/Criptonita 10.37.05/Criptonita/Aplication/SceneDelegate.swift"; sourceTree = "<group>"; };
 		F5AB5BC239A36DDA1F7EC6C1 /* Pods-Criptonita.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Criptonita.release.xcconfig"; path = "Target Support Files/Pods-Criptonita/Pods-Criptonita.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,7 +115,6 @@
 				14AFA684EF8C250002BEC428 /* Pods-CriptonitaTests.debug.xcconfig */,
 				A618678C997A39BFA514AD2E /* Pods-CriptonitaTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -224,8 +223,8 @@
 		F017CAB725BB0D2F00B1CDF2 /* Aplication */ = {
 			isa = PBXGroup;
 			children = (
+				F017CB8825BB52B200B1CDF2 /* SceneDelegate.swift */,
 				F017CA7A25BB0CDD00B1CDF2 /* AppDelegate.swift */,
-				F017CA7C25BB0CDD00B1CDF2 /* SceneDelegate.swift */,
 				F017CA8825BB0CDF00B1CDF2 /* LaunchScreen.storyboard */,
 			);
 			path = Aplication;
@@ -469,11 +468,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F017CB8925BB52B200B1CDF2 /* SceneDelegate.swift in Sources */,
 				F017CA8525BB0CDD00B1CDF2 /* Criptonita.xcdatamodeld in Sources */,
 				F017CA7F25BB0CDD00B1CDF2 /* HomeViewController.swift in Sources */,
 				F017CA7B25BB0CDD00B1CDF2 /* AppDelegate.swift in Sources */,
 				F017CABF25BB0EEB00B1CDF2 /* ViewConfiguration.swift in Sources */,
-				F017CA7D25BB0CDD00B1CDF2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,6 +651,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Criptonita/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -659,7 +659,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.eu.Criptonita;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -671,6 +671,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Criptonita/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -678,7 +679,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.eu.Criptonita;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
