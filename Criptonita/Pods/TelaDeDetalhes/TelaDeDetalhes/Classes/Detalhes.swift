@@ -17,7 +17,7 @@ public class Detalhes {
             nc.navigationBar.tintColor = .white
             nc.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
             nc.navigationBar.shadowImage = UIImage()
-            let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+            let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
             nc.navigationBar.titleTextAttributes = textAttributes
             
         } else {

@@ -74,9 +74,9 @@ extension HomeViewController: ViewConfiguration {
             make.height.equalTo(320)
         }
         titleLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(headerContainerView).offset(130)
-            make.left.equalTo(headerContainerView).offset(20)
-            make.right.equalTo(headerContainerView).inset(20)
+            make.top.equalTo(headerView).offset(130)
+            make.left.equalTo(headerView).offset(20)
+            make.right.equalTo(headerView).inset(20)
         
         }
         centralButton.snp.makeConstraints { (make) in
