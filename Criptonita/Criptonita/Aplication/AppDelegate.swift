@@ -10,11 +10,13 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let grayColor = UIColor(red:0.15, green:0.15, blue:0.15, alpha:1.0)
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = grayColor
+        application.statusBarStyle = .lightContent
         return true
     }
 
