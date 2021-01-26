@@ -9,11 +9,20 @@ import UIKit
 import SnapKit
 import CoreData
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITabBarDelegate {
+    
     
     //MARK: - Atributes
     let viewModel = HomeViewModel()
-    
+    var tableView = UITableView()
+    var arrayMoedas = [
+        CriptoMoeda(nome: "Bitcoin", valorAtual: "R$ 31.000", sigla: "BTC", imagem: UIImage(named: "bitcoin")!),
+        CriptoMoeda(nome: "Bitcoin", valorAtual: "R$ 31.000", sigla: "BTC", imagem: UIImage(named: "bitcoin")!),
+        CriptoMoeda(nome: "Bitcoin", valorAtual: "R$ 31.000", sigla: "BTC", imagem: UIImage(named: "bitcoin")!),
+        CriptoMoeda(nome: "Bitcoin", valorAtual: "R$ 31.000", sigla: "BTC", imagem: UIImage(named: "bitcoin")!),
+        CriptoMoeda(nome: "Bitcoin", valorAtual: "R$ 31.000", sigla: "BTC", imagem: UIImage(named: "bitcoin")!),
+        CriptoMoeda(nome: "Bitcoin", valorAtual: "R$ 31.000", sigla: "BTC", imagem: UIImage(named: "bitcoin")!)
+    ]
     
     private lazy var headerView: UIView = {
         let view = UIView()
@@ -34,32 +43,39 @@ class HomeViewController: UIViewController {
         var searchBar = UISearchBar()
         searchBar.barTintColor = .black
         searchBar.placeholder = "Search"
-        
+        let textFieldInsideUISearchBar = searchBar.value(forKey: "searchField") as? UITextField
+        textFieldInsideUISearchBar?.textColor = UIColor.white
         searchBar.setImage(UIImage(named: "SearchIcon"), for: .search, state: .normal)
         return searchBar
     }()
     
-    private lazy var centralButton: UIButton = {
+    private lazy var celulaItem:UILabel = criarLabel("Testando")
 
-        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 90, height: 20))
-        button.backgroundColor = UIColor(red: 0.55, green:0.59, blue:0.37, alpha: 1)
-        button.setTitle("Abrir Detalhes", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+    private lazy var bottomTabBar:UITabBar = {
+        let tabBar = UITabBar()
+        tabBar.barStyle = UIBarStyle.black
+        tabBar.backgroundColor = .black
+        tabBar.tintColor = .black
         
+        let homeTabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
         
-        button.layer.cornerRadius = 10
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.white.cgColor
-        
-        button.addTarget(self, action: #selector(botaoCentralAcao), for: .touchUpInside)
+        let favoritesTabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
 
+        let itemsTabBar = [
+            homeTabBarItem,
+            favoritesTabBarItem
+        ]
+
+        tabBar.setItems(itemsTabBar, animated: true)
         
-        return button
+        return tabBar
     }()
-
+    
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        bottomTabBar.delegate = self
+        configuraTableView()
         setupViewConfiguration()
         configuraNavgationBar()
         statusBarBackgroundColor()
@@ -84,6 +100,16 @@ class HomeViewController: UIViewController {
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         self.navigationController?.navigationBar.titleTextAttributes = textAttributes
     }
+    
+    func configuraTableView() {
+        
+        self.tableView.frame = CGRect(x: 0, y: 200, width: self.view.frame.width, height: 400)
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.register(CelulaMoeda.self, forCellReuseIdentifier: "cell")
+        self.tableView.backgroundColor = .black
+    }
+    
     func criarLabel(_ text:String, size:CGFloat=25) -> UILabel {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: size, weight: .light)
@@ -97,6 +123,34 @@ class HomeViewController: UIViewController {
         
         viewModel.abrirDetalhes(nc)
     }
+    
+    //MARK: - TableView Delegate
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrayMoedas.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let celula = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CelulaMoeda
+        celula.imagemPlace.image = self.arrayMoedas[indexPath.row].imagem
+        celula.labelNome.text = self.arrayMoedas[indexPath.row].nome
+        celula.labelValor.text = self.arrayMoedas[indexPath.row].valorAtual
+        celula.labelSigla.text = self.arrayMoedas[indexPath.row].sigla
+        return celula
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+    
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        print("\(item.tag)")
+        if(item.tag == 0) {
+            
+            self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+            
+        } else {
+            
+        }
+    }
 }
 extension HomeViewController: ViewConfiguration {
     func buildViewHierarchy() {
@@ -105,7 +159,8 @@ extension HomeViewController: ViewConfiguration {
         headerView.addSubview(dateLabel)
         headerView.addSubview(searchBar)
         view.addSubview(separatorView)
-        view.addSubview(centralButton)
+        view.addSubview(tableView)
+        view.addSubview(bottomTabBar)
     }
     
     func setupConstraints() {
@@ -141,13 +196,13 @@ extension HomeViewController: ViewConfiguration {
             make.height.equalTo(1)
         }
         
-        centralButton.snp.makeConstraints { (make) in
-            make.top.equalTo(headerView).offset(300)
-            make.left.equalTo(headerView).offset(50)
-            make.right.equalTo(headerView).inset(50)
-            make.height.equalTo(50)
-            
+        bottomTabBar.snp.makeConstraints { (make) in
+            make.bottom.equalTo(view.snp.bottom).offset(0)
+            make.left.equalTo(view.snp.left).offset(0)
+            make.right.equalTo(view.snp.right).inset(0)
+            make.height.equalTo(60)
         }
+        
     }
     
     func configureViews() {
@@ -161,4 +216,15 @@ public extension UISearchBar {
         guard let sc = (clrChange.filter { $0 is UITextField }).first as? UITextField else { return }
         sc.textColor = color
     }
+}
+class ThirtyDayCell: UITableViewCell {
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 }

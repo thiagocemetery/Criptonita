@@ -6,8 +6,7 @@
 //
 
 import Foundation
-import UIKit
-
+import UIKit	
 import TelaDeDetalhes
 
 class HomeViewModel {
