@@ -10,14 +10,24 @@ import UIKit
 import TelaDeDetalhes
 
 class HomeViewModel {
-    //MARK: - Atributes
+    var navigationController:UINavigationController!
     
-    //MARK: - Constructor
-
-    
-    func abrirDetalhes(_ navigationController:UINavigationController) {
+    func escolherNavControl(_ navControl:UINavigationController) {
+        self.navigationController = navControl
+    }
+    func abrirDetalhes(moeda:CriptoMoeda) {
         
-        let newViewCOntroller = Detalhes(navigationController: navigationController)
-        newViewCOntroller.abreDetalhes(initials:"BTC",currentValueOFCoin: "10.000,50", isFavorite: false, hourSell: "200.000,25", monthSell: "3.000.000,0", yearSell: "10.000.000,67")
+        let newViewCOntroller = Detalhes(navigationController: self.navigationController)
+        newViewCOntroller.abreDetalhes(initials:moeda.sigla, currentValueOFCoin: moeda.valorAtual, isFavorite: false, hourSell: moeda.vendaHora, monthSell: moeda.vendaMes, yearSell: moeda.vendaAno)
+    }
+    
+    func getMoedas() -> [CriptoMoeda] {
+        
+        var arrayMoedas: [CriptoMoeda] = []
+        
+        for _ in 1 ... 10 {
+            arrayMoedas.append(CriptoMoeda(nome: "Bitcoin", valorAtual: "31.000", sigla: "BTC", imagem: UIImage(named: "bitcoin")!, vendaHora: "12.000", vendaMes: "123.000", vendaAno: "1234000"))
+        }
+        return arrayMoedas
     }
 }

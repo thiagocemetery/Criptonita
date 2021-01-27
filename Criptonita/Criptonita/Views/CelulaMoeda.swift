@@ -46,8 +46,10 @@ class CelulaMoeda:UITableViewCell {
         self.addSubview(imagemPlace)
         self.addSubview(labelSigla)
         self.backgroundColor = .black
-    }
-    
+        let fundoHighlighted = UIView()
+        fundoHighlighted.backgroundColor = UIColor.darkGray
+        self.selectedBackgroundView = fundoHighlighted
+}
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

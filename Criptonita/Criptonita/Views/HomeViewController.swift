@@ -11,18 +11,10 @@ import CoreData
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITabBarDelegate {
     
-    
     //MARK: - Atributes
     let viewModel = HomeViewModel()
     var tableView = UITableView()
-    var arrayMoedas = [
-        CriptoMoeda(nome: "Bitcoin", valorAtual: "R$ 31.000", sigla: "BTC", imagem: UIImage(named: "bitcoin")!),
-        CriptoMoeda(nome: "Bitcoin", valorAtual: "R$ 31.000", sigla: "BTC", imagem: UIImage(named: "bitcoin")!),
-        CriptoMoeda(nome: "Bitcoin", valorAtual: "R$ 31.000", sigla: "BTC", imagem: UIImage(named: "bitcoin")!),
-        CriptoMoeda(nome: "Bitcoin", valorAtual: "R$ 31.000", sigla: "BTC", imagem: UIImage(named: "bitcoin")!),
-        CriptoMoeda(nome: "Bitcoin", valorAtual: "R$ 31.000", sigla: "BTC", imagem: UIImage(named: "bitcoin")!),
-        CriptoMoeda(nome: "Bitcoin", valorAtual: "R$ 31.000", sigla: "BTC", imagem: UIImage(named: "bitcoin")!)
-    ]
+    
     
     private lazy var headerView: UIView = {
         let view = UIView()
@@ -79,11 +71,16 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         setupViewConfiguration()
         configuraNavgationBar()
         statusBarBackgroundColor()
+        configuraViewModel()
         
     }
     
     //MARK: - Methods
-    
+    func configuraViewModel() {
+        guard let navControl = self.navigationController else { return }
+        viewModel.escolherNavControl(navControl)
+        
+    }
     func statusBarBackgroundColor() {
         
         let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.size.width, height: 20.0))
@@ -118,28 +115,35 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         label.text = text
         return label
     }
-    @objc func botaoCentralAcao() {
-        guard let nc = self.navigationController else { return }
-        
-        viewModel.abrirDetalhes(nc)
-    }
     
     //MARK: - TableView Delegate
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayMoedas.count
+        return viewModel.getMoedas().count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celula = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CelulaMoeda
-        celula.imagemPlace.image = self.arrayMoedas[indexPath.row].imagem
-        celula.labelNome.text = self.arrayMoedas[indexPath.row].nome
-        celula.labelValor.text = self.arrayMoedas[indexPath.row].valorAtual
-        celula.labelSigla.text = self.arrayMoedas[indexPath.row].sigla
+        let moedaAtual = viewModel.getMoedas()[indexPath.row]
+        
+        celula.imagemPlace.image = moedaAtual.imagem
+        celula.labelNome.text = moedaAtual.nome
+        celula.labelValor.text = moedaAtual.valorAtual
+        celula.labelSigla.text = moedaAtual.sigla
+        
+
+        
         return celula
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        viewModel.abrirDetalhes(moeda: viewModel.getMoedas()[indexPath.row])
+        
+    }
+    
+    
     
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         print("\(item.tag)")
@@ -226,5 +230,4 @@ class ThirtyDayCell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
