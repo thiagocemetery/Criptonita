@@ -1,0 +1,6 @@
+framework module ModuloSuporte {
+  umbrella header "ModuloSuporte-umbrella.h"
+
+  export *
+  module * { export * }
+}

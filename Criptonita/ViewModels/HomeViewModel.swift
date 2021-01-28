@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit	
-//import TelaDeDetalhes
+import TelaDeDetalhes
 
 class HomeViewModel {
     var navigationController:UINavigationController!
@@ -16,9 +16,9 @@ class HomeViewModel {
         self.navigationController = navControl
     }
     func abrirDetalhes(moeda:CriptoMoeda) {
-//        
-//        let newViewCOntroller = Detalhes(navigationController: self.navigationController)
-//        newViewCOntroller.abreDetalhes(initials:moeda.sigla, currentValueOFCoin: moeda.valorAtual, isFavorite: false, hourSell: moeda.vendaHora, monthSell: moeda.vendaMes, yearSell: moeda.vendaAno)
+        
+        let newViewCOntroller = Detalhes(navigationController: self.navigationController)
+        newViewCOntroller.abreDetalhes(initials:moeda.sigla, currentValueOFCoin: moeda.valorAtual, isFavorite: false, hourSell: moeda.vendaHora, monthSell: moeda.vendaMes, yearSell: moeda.vendaAno)
     }
 }
 
