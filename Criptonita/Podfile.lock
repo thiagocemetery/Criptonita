@@ -1,14 +1,17 @@
 PODS:
+  - Alamofire (4.9.1)
   - SnapKit (5.0.1)
   - TelaDeDetalhes (0.1.0):
     - SnapKit (~> 5.0.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.0)
   - SnapKit (~> 5.0.0)
   - TelaDeDetalhes (from `https://github.com/bittencourthiago/TelaDeDetalhes.git`)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - SnapKit
 
 EXTERNAL SOURCES:
@@ -21,9 +24,10 @@ CHECKOUT OPTIONS:
     :git: https://github.com/bittencourthiago/TelaDeDetalhes.git
 
 SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   TelaDeDetalhes: 2925fdfd1da7ebdf40707ac96f12355bbf15ebfa
 
-PODFILE CHECKSUM: 4905974ce2c1aeb84aaf68ef246686b428d0fec5
+PODFILE CHECKSUM: 3c4ca066b4e798f74bb3f8ae587c74c1bf54ecea
 
 COCOAPODS: 1.10.1
