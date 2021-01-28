@@ -130,7 +130,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         //celula.imagemPlace.text = moedaAtual.idIcon
         celula.labelNome.text = moedaAtual.name
-        celula.labelValor.text = (moedaAtual.priceUsd) as? String
+        celula.labelValor.text = moedaAtual.priceUsd
         celula.labelSigla.text = moedaAtual.assetID
         
 
