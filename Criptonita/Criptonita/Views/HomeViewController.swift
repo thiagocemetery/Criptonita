@@ -14,7 +14,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //MARK: - Atributes
     let viewModel = HomeViewModel()
     var tableView = UITableView()
-    
+    var coins: ModelCoin = []
     
     private lazy var headerView: UIView = {
         let view = UIView()
@@ -72,6 +72,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         configuraNavgationBar()
         statusBarBackgroundColor()
         configuraViewModel()
+        CoinAPI().downloadJSON { (coins) in
+            self.coins = coins
+        }
         
     }
     
@@ -119,16 +122,16 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //MARK: - TableView Delegate
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getMoedas().count
+        return coins.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celula = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CelulaMoeda
-        let moedaAtual = viewModel.getMoedas()[indexPath.row]
+        let moedaAtual = coins[indexPath.row]
         
-        celula.imagemPlace.image = moedaAtual.imagem
-        celula.labelNome.text = moedaAtual.nome
-        celula.labelValor.text = moedaAtual.valorAtual
-        celula.labelSigla.text = moedaAtual.sigla
+        //celula.imagemPlace.text = moedaAtual.idIcon
+        celula.labelNome.text = moedaAtual.name
+        celula.labelValor.text = (moedaAtual.priceUsd) as? String
+        celula.labelSigla.text = moedaAtual.assetID
         
 
         
@@ -139,7 +142,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        viewModel.abrirDetalhes(moeda: viewModel.getMoedas()[indexPath.row])
+        //viewModel.abrirDetalhes(moeda: coins)
         
     }
     
