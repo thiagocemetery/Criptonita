@@ -6,7 +6,7 @@ target 'Criptonita' do
   use_frameworks!
   pod  'SnapKit', '~> 5.0.0'
   pod 'Alamofire', '~> 4.0'
-  pod 'ModuloSuporte', :git => 'https://github.com/bittencourthiago/ModuloSuporte.git'
+  pod 'TelaDeDetalhes', :git => 'https://github.com/bittencourthiago/TelaDeDetalhes.git'
 
   # Pods for Criptonita
 
