@@ -74,6 +74,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         configuraViewModel()
         CoinAPI().downloadJSON { (coins) in
             self.coins = coins
+            self.tableView.reloadData()
         }
         
     }
@@ -130,7 +131,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         //celula.imagemPlace.text = moedaAtual.idIcon
         celula.labelNome.text = moedaAtual.name
-        celula.labelValor.text = moedaAtual.priceUsd
+        //celula.labelValor.text = moedaAtual.priceUsd
         celula.labelSigla.text = moedaAtual.assetID
         
 

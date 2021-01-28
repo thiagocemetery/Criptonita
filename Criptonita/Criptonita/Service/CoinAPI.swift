@@ -36,7 +36,7 @@ class CoinAPI: CoinAPIProtocol {
                 case .success:
                     do {
                         let coinRecovered = try JSONDecoder().decode(ModelCoin.self, from: response.data!)
-                        print(coinRecovered)
+                        completion(coinRecovered)
                     }
                     catch {
                         if let errorCode = response.response?.statusCode {
