@@ -53,15 +53,16 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         configuraNavgationBar()
         statusBarBackgroundColor()
         configuraViewModel()
-        CoinAPI().downloadJSON { (coins) in
-            self.coins = coins
-            self.tableView.reloadData()
-        }
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     //MARK: - Methods
     func configuraViewModel() {
+        
+        viewModel.criarDadosCelula(tableView)
         guard let navControl = self.navigationController else { return }
         viewModel.escolherNavControl(navControl)
         
@@ -88,7 +89,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.tableView.frame = CGRect(x: 0, y: 200, width: self.view.frame.width, height: 400)
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.register(CelulaMoeda.self, forCellReuseIdentifier: "cell")
+        self.tableView.register(MoedaTableViewCell.self, forCellReuseIdentifier: "cell")
         self.tableView.backgroundColor = .black
     }
     
@@ -104,25 +105,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //MARK: - TableView Delegate
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return coins.count
+        return viewModel.celulasMoedas.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let celula = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CelulaMoeda
-        let moedaAtual = coins[indexPath.row]
         
-        let value = moedaAtual.priceUsd
-        let stringPrice = String(format: "$ %.3f", value!)
-        
-
-        let idCoinIcon = moedaAtual.idIcon
-        let iconUrl = idCoinIcon?.replacingOccurrences(of: "-", with: "")
-        guard let recoveredUrl = URL(string: "https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_32/\(iconUrl).png") else { return celula}
-        
-        celula.imagemPlace.af_setImage(withURL: recoveredUrl)
-        celula.labelNome.text = moedaAtual.name
-        celula.labelValor.text = stringPrice
-        celula.labelSigla.text = moedaAtual.assetID
-        
+        var celula = viewModel.celulasMoedas[indexPath.row]
         
         return celula
     }

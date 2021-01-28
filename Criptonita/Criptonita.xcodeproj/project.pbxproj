@@ -23,10 +23,11 @@
 		F017CAA025BB0CE000B1CDF2 /* CriptonitaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017CA9F25BB0CE000B1CDF2 /* CriptonitaUITests.swift */; };
 		F017CABF25BB0EEB00B1CDF2 /* ViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017CABE25BB0EEB00B1CDF2 /* ViewConfiguration.swift */; };
 		F03A1DDC25C03DDF00617973 /* CriptoMoeda.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03A1DDB25C03DDF00617973 /* CriptoMoeda.swift */; };
-		F03A1DE425C04BE900617973 /* CelulaMoeda.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03A1DE325C04BE900617973 /* CelulaMoeda.swift */; };
+		F03A1DE425C04BE900617973 /* MoedaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03A1DE325C04BE900617973 /* MoedaTableViewCell.swift */; };
 		F08C5F0825BCBC2F002561C0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08C5F0725BCBC2F002561C0 /* HomeViewModel.swift */; };
 		F0D1512925C2FBA1003D117C /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D1512725C2FBA1003D117C /* MainTabBarViewController.swift */; };
 		F0D1512A25C2FBA1003D117C /* MainTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0D1512825C2FBA1003D117C /* MainTabBarViewController.xib */; };
+		F0D1521B25C341D8003D117C /* MoedaCelulaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D1521A25C341D8003D117C /* MoedaCelulaViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,10 +75,11 @@
 		F017CAA125BB0CE000B1CDF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F017CABE25BB0EEB00B1CDF2 /* ViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
 		F03A1DDB25C03DDF00617973 /* CriptoMoeda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoMoeda.swift; sourceTree = "<group>"; };
-		F03A1DE325C04BE900617973 /* CelulaMoeda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelulaMoeda.swift; sourceTree = "<group>"; };
+		F03A1DE325C04BE900617973 /* MoedaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaTableViewCell.swift; sourceTree = "<group>"; };
 		F08C5F0725BCBC2F002561C0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F0D1512725C2FBA1003D117C /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTabBarViewController.swift; path = Views/MainTabBarViewController.swift; sourceTree = SOURCE_ROOT; };
 		F0D1512825C2FBA1003D117C /* MainTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainTabBarViewController.xib; path = Views/MainTabBarViewController.xib; sourceTree = SOURCE_ROOT; };
+		F0D1521A25C341D8003D117C /* MoedaCelulaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaCelulaViewModel.swift; sourceTree = "<group>"; };
 		F5AB5BC239A36DDA1F7EC6C1 /* Pods-Criptonita.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Criptonita.release.xcconfig"; path = "Target Support Files/Pods-Criptonita/Pods-Criptonita.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -233,6 +235,7 @@
 		F017CAB525BB0D1F00B1CDF2 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				F0D1521A25C341D8003D117C /* MoedaCelulaViewModel.swift */,
 				F08C5F0725BCBC2F002561C0 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
@@ -242,7 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				F017CA7E25BB0CDD00B1CDF2 /* HomeViewController.swift */,
-				F03A1DE325C04BE900617973 /* CelulaMoeda.swift */,
+				F03A1DE325C04BE900617973 /* MoedaTableViewCell.swift */,
 				F0D1512725C2FBA1003D117C /* MainTabBarViewController.swift */,
 				F0D1512825C2FBA1003D117C /* MainTabBarViewController.xib */,
 			);
@@ -498,11 +501,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F03A1DE425C04BE900617973 /* CelulaMoeda.swift in Sources */,
+				F03A1DE425C04BE900617973 /* MoedaTableViewCell.swift in Sources */,
 				F08C5F0825BCBC2F002561C0 /* HomeViewModel.swift in Sources */,
 				F017CA8525BB0CDD00B1CDF2 /* Criptonita.xcdatamodeld in Sources */,
 				F0D1512925C2FBA1003D117C /* MainTabBarViewController.swift in Sources */,
 				F017CA7F25BB0CDD00B1CDF2 /* HomeViewController.swift in Sources */,
+				F0D1521B25C341D8003D117C /* MoedaCelulaViewModel.swift in Sources */,
 				F017CA7B25BB0CDD00B1CDF2 /* AppDelegate.swift in Sources */,
 				F03A1DDC25C03DDF00617973 /* CriptoMoeda.swift in Sources */,
 				06F3CBD425C20D7400D7577F /* SceneDelegate.swift in Sources */,
