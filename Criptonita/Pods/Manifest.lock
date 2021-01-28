@@ -1,13 +1,13 @@
 PODS:
   - Alamofire (4.9.1)
+  - ModuloSuporte (0.1.0):
+    - SnapKit
   - SnapKit (5.0.1)
-  - TelaDeDetalhes (0.1.0):
-    - SnapKit (~> 5.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - ModuloSuporte (from `https://github.com/bittencourthiago/ModuloSuporte.git`)
   - SnapKit (~> 5.0.0)
-  - TelaDeDetalhes (from `https://github.com/bittencourthiago/TelaDeDetalhes.git`)
 
 SPEC REPOS:
   trunk:
@@ -15,19 +15,19 @@ SPEC REPOS:
     - SnapKit
 
 EXTERNAL SOURCES:
-  TelaDeDetalhes:
-    :git: https://github.com/bittencourthiago/TelaDeDetalhes.git
+  ModuloSuporte:
+    :git: https://github.com/bittencourthiago/ModuloSuporte.git
 
 CHECKOUT OPTIONS:
-  TelaDeDetalhes:
-    :commit: dad735dadd9380931ee35b7c4f33164732d5393b
-    :git: https://github.com/bittencourthiago/TelaDeDetalhes.git
+  ModuloSuporte:
+    :commit: 52e737e94f7c9578f60e9609979003162e4ae757
+    :git: https://github.com/bittencourthiago/ModuloSuporte.git
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  ModuloSuporte: 78948664f52d919f2f162224059ca61b2f46fa78
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
-  TelaDeDetalhes: 2925fdfd1da7ebdf40707ac96f12355bbf15ebfa
 
-PODFILE CHECKSUM: 3c4ca066b4e798f74bb3f8ae587c74c1bf54ecea
+PODFILE CHECKSUM: b94d6d50857ce33928c4597fa7ffd835b41685a0
 
 COCOAPODS: 1.10.1

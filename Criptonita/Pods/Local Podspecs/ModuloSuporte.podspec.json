@@ -1,9 +1,9 @@
 {
-  "name": "TelaDeDetalhes",
+  "name": "ModuloSuporte",
   "version": "0.1.0",
-  "summary": "A short description of TelaDeDetalhes.",
+  "summary": "A short description of ModuloSuporte.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/bittencourthiago/TelaDeDetalhes",
+  "homepage": "https://github.com/bittencourthiago/ModuloSuporte",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,16 +12,16 @@
     "bittencourthiago": "thiago.bittc@gmail.com"
   },
   "source": {
-    "git": "https://github.com/bittencourthiago/TelaDeDetalhes.git",
+    "git": "https://github.com/bittencourthiago/ModuloSuporte.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "10.0"
   },
-  "source_files": "TelaDeDetalhes/Classes/**/*",
+  "source_files": "ModuloSuporte/Classes/**/*",
   "dependencies": {
     "SnapKit": [
-      "~> 5.0.0"
+
     ]
   }
 }

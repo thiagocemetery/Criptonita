@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     @available(iOS 13.0, *)
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        let mainViewController = HomeViewController()
+        let mainViewController = MainTabBarViewController()
         let navigationController = UINavigationController(rootViewController: mainViewController)
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
