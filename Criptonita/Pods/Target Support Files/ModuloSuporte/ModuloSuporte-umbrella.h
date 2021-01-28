@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double TelaDeDetalhesVersionNumber;
-FOUNDATION_EXPORT const unsigned char TelaDeDetalhesVersionString[];
+FOUNDATION_EXPORT double ModuloSuporteVersionNumber;
+FOUNDATION_EXPORT const unsigned char ModuloSuporteVersionString[];
 

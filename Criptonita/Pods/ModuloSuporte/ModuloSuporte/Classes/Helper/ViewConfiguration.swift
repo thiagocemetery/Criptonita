@@ -1,12 +1,9 @@
 //
 //  ViewConfiguration.swift
-//  Pods-TelaDeDetalhes_Example
+//  Favoritos
 //
-//  Created by Thiago Bittencourt Coelho on 21/01/21.
+//  Created by Phillippi Areias Aguiar on 1/22/21.
 //
-
-import Foundation
-
 
 protocol ViewConfiguration: class {
     func buildViewHierarchy()
@@ -23,6 +20,7 @@ extension ViewConfiguration {
         configureViews()
     }
     
-    func configureViews() { }
+    func configureViews() {
+        
+    }
 }
-

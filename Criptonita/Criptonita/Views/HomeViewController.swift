@@ -43,30 +43,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     private lazy var celulaItem:UILabel = criarLabel("Testando")
 
-    private lazy var bottomTabBar:UITabBar = {
-        let tabBar = UITabBar()
-        tabBar.barStyle = UIBarStyle.black
-        tabBar.backgroundColor = .black
-        tabBar.tintColor = .black
-        
-        let homeTabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
-        
-        let favoritesTabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
-
-        let itemsTabBar = [
-            homeTabBarItem,
-            favoritesTabBarItem
-        ]
-
-        tabBar.setItems(itemsTabBar, animated: true)
-        
-        return tabBar
-    }()
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        bottomTabBar.delegate = self
         configuraTableView()
         setupViewConfiguration()
         configuraNavgationBar()
@@ -129,9 +109,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let celula = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CelulaMoeda
         let moedaAtual = coins[indexPath.row]
         
+        let value = moedaAtual.priceUsd
+        let stringPrice = String(format: "$ %.3f", value!)
         //celula.imagemPlace.text = moedaAtual.idIcon
         celula.labelNome.text = moedaAtual.name
-        celula.labelValor.text = "\(String(describing: moedaAtual.priceUsd))"
+        celula.labelValor.text = stringPrice
         celula.labelSigla.text = moedaAtual.assetID
         
 
@@ -149,16 +131,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     
     
-    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        print("\(item.tag)")
-        if(item.tag == 0) {
-            
-            self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
-            
-        } else {
-            
-        }
-    }
+
 }
 extension HomeViewController: ViewConfiguration {
     func buildViewHierarchy() {
@@ -168,7 +141,7 @@ extension HomeViewController: ViewConfiguration {
         headerView.addSubview(searchBar)
         view.addSubview(separatorView)
         view.addSubview(tableView)
-        view.addSubview(bottomTabBar)
+        
     }
     
     func setupConstraints() {
@@ -204,12 +177,7 @@ extension HomeViewController: ViewConfiguration {
             make.height.equalTo(1)
         }
         
-        bottomTabBar.snp.makeConstraints { (make) in
-            make.bottom.equalTo(view.snp.bottom).offset(0)
-            make.left.equalTo(view.snp.left).offset(0)
-            make.right.equalTo(view.snp.right).inset(0)
-            make.height.equalTo(60)
-        }
+        
         
     }
     

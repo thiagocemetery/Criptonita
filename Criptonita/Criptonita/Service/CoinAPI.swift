@@ -33,8 +33,11 @@ class CoinAPI: CoinAPIProtocol {
             switch response.result{
                 case .success:
                     do {
-                        let coinRecovered = try JSONDecoder().decode(ModelCoin.self, from: response.data!)
-                        completion(coinRecovered)
+                        guard let data = response.data else { return }
+                        let coinRecovered = try JSONDecoder().decode(ModelCoin.self, from: data)
+                        let filterCripto = coinRecovered.filter {$0.type_is_crypto == 1}
+                        let filterNil = filterCripto.filter {$0.priceUsd != nil}
+                        completion(filterNil)
                     }
                     catch {
                         if let errorCode = response.response?.statusCode {

@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit	
-import TelaDeDetalhes
+import ModuloSuporte
 
 class HomeViewModel {
     var navigationController:UINavigationController!
