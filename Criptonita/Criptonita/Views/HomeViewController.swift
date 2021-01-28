@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 import CoreData
+import AlamofireImage
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITabBarDelegate {
     
@@ -111,12 +112,17 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let value = moedaAtual.priceUsd
         let stringPrice = String(format: "$ %.3f", value!)
-        //celula.imagemPlace.text = moedaAtual.idIcon
+        
+
+        let idCoinIcon = moedaAtual.idIcon
+        let iconUrl = idCoinIcon?.replacingOccurrences(of: "-", with: "")
+        guard let recoveredUrl = URL(string: "https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_32/\(iconUrl).png") else { return celula}
+        
+        celula.imagemPlace.af_setImage(withURL: recoveredUrl)
         celula.labelNome.text = moedaAtual.name
         celula.labelValor.text = stringPrice
         celula.labelSigla.text = moedaAtual.assetID
         
-
         
         return celula
     }
