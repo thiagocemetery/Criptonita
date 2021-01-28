@@ -10,7 +10,7 @@ import SnapKit
 import CoreData
 import AlamofireImage
 
-class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITabBarDelegate {
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITabBarDelegate, UISearchBarDelegate {
     
     //MARK: - Atributes
     let viewModel = HomeViewModel()
@@ -49,6 +49,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         configuraTableView()
+        searchBar.delegate = self
         setupViewConfiguration()
         configuraNavgationBar()
         statusBarBackgroundColor()
@@ -105,11 +106,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //MARK: - TableView Delegate
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.celulasMoedas.count
+        return viewModel.arrayFiltrados.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var celula = viewModel.celulasMoedas[indexPath.row]
+        var celula = viewModel.arrayFiltrados[indexPath.row]
         
         return celula
     }
@@ -122,6 +123,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
     }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.filtraCelulasMoedas(usertext: searchText)
+        tableView.reloadData()
+    }
     
     
 

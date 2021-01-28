@@ -14,6 +14,7 @@ class HomeViewModel {
     var moedas:ModelCoin=[]
     var celulasMoedas:[MoedaTableViewCell] = []
     var tableView:UITableView!
+    var arrayFiltrados: [MoedaTableViewCell] = []
     
     func escolherNavControl(_ navControl:UINavigationController) {
         self.navigationController = navControl
@@ -28,12 +29,25 @@ class HomeViewModel {
             
             for moeda in coins {
                 self.celulasMoedas.append(MoedaTableViewCell(moeda, style: .default, reuseIdentifier: "cell"))
+                self.arrayFiltrados = self.celulasMoedas
             }
             tv.reloadData()
         }
         
     }
     
+    func filtraCelulasMoedas(usertext: String) {
+       
+        if usertext == "" {
+            arrayFiltrados = celulasMoedas
+        } else {
+            let filtradas = celulasMoedas.filter {
+                guard let searchCoin = $0.labelNome.text?.lowercased().contains(usertext.lowercased()) else { return false}
+                return searchCoin
+            }
+            arrayFiltrados = filtradas
+        }
+    }
 }
 
 
