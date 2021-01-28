@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Alamofire
 
-struct APIData { //https://rest.coinapi.io/v1/assets?filter_asset_id=type_is_crypto?apikey=FFC56E47-B89E-4FF6-98BB-06C4E5D4F279
+struct APIData {
         static let urlMain: String = "https://rest.coinapi.io/v1"
         static let apiKey: String = "?apikey=FFC56E47-B89E-4FF6-98BB-06C4E5D4F279"
         static let urlAssetBTC = "\(APIData.urlMain)/assets\(APIData.apiKey)"
