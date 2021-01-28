@@ -74,6 +74,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         configuraViewModel()
         CoinAPI().downloadJSON { (coins) in
             self.coins = coins
+            self.tableView.reloadData()
         }
         
     }
@@ -93,7 +94,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func configuraNavgationBar() {
-\        self.navigationController?.navigationBar.barTintColor = .black
+       self.navigationController?.navigationBar.barTintColor = .black
         self.navigationController?.navigationBar.tintColor = .white
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -130,7 +131,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         //celula.imagemPlace.text = moedaAtual.idIcon
         celula.labelNome.text = moedaAtual.name
-        celula.labelValor.text = (moedaAtual.priceUsd) as? String
+        celula.labelValor.text = "\(String(describing: moedaAtual.priceUsd))"
         celula.labelSigla.text = moedaAtual.assetID
         
 
