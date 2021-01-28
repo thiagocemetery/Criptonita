@@ -7,6 +7,7 @@ target 'Criptonita' do
   pod  'SnapKit', '~> 5.0.0'
   pod 'Alamofire', '~> 4.0'
   pod 'ModuloSuporte', :git => 'https://github.com/bittencourthiago/ModuloSuporte.git'
+  pod 'AlamofireImage'
 
   # Pods for Criptonita
 

@@ -8,8 +8,9 @@
 import UIKit
 import SnapKit
 import CoreData
+import AlamofireImage
 
-class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITabBarDelegate {
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITabBarDelegate, UISearchBarDelegate {
     
     //MARK: - Atributes
     let viewModel = HomeViewModel()
@@ -48,19 +49,21 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         configuraTableView()
+        searchBar.delegate = self
         setupViewConfiguration()
         configuraNavgationBar()
         statusBarBackgroundColor()
         configuraViewModel()
-        CoinAPI().downloadJSON { (coins) in
-            self.coins = coins
-            self.tableView.reloadData()
-        }
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     //MARK: - Methods
     func configuraViewModel() {
+        
+        viewModel.criarDadosCelula(tableView)
         guard let navControl = self.navigationController else { return }
         viewModel.escolherNavControl(navControl)
         
@@ -87,7 +90,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.tableView.frame = CGRect(x: 0, y: 200, width: self.view.frame.width, height: 400)
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.register(CelulaMoeda.self, forCellReuseIdentifier: "cell")
+        self.tableView.register(MoedaTableViewCell.self, forCellReuseIdentifier: "cell")
         self.tableView.backgroundColor = .black
     }
     
@@ -103,20 +106,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //MARK: - TableView Delegate
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return coins.count
+        return viewModel.arrayFiltrados.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let celula = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CelulaMoeda
-        let moedaAtual = coins[indexPath.row]
         
-        let value = moedaAtual.priceUsd
-        let stringPrice = String(format: "$ %.3f", value!)
-        //celula.imagemPlace.text = moedaAtual.idIcon
-        celula.labelNome.text = moedaAtual.name
-        celula.labelValor.text = stringPrice
-        celula.labelSigla.text = moedaAtual.assetID
-        
-
+        var celula = viewModel.arrayFiltrados[indexPath.row]
         
         return celula
     }
@@ -129,6 +123,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
     }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.filtraCelulasMoedas(usertext: searchText)
+        tableView.reloadData()
+    }
     
     
 
