@@ -174,6 +174,12 @@ extension HomeViewController: ViewConfiguration {
             make.right.equalTo(view.snp.right).inset(0)
             make.height.equalTo(1)
         }
+        tableView.snp.makeConstraints { (make) in
+            make.top.equalTo(separatorView.snp.bottom)
+            make.left.equalTo(view.snp.left).offset(0)
+            make.right.equalTo(view.snp.right).inset(0)
+            make.bottom.equalTo(view.snp.bottom).offset(60)
+        }
         
         
         

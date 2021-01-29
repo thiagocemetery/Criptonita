@@ -11,8 +11,16 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    var window:UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+
+        let initialViewController = MainTabBarViewController()
+
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+
         // Override point for customization after application launch.
         let grayColor = UIColor(red:0.15, green:0.15, blue:0.15, alpha:1.0)
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = grayColor

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		06F3CBB725C20C7600D7577F /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F3CBB625C20C7600D7577F /* CoinModel.swift */; };
 		06F3CBBD25C20C9200D7577F /* CoinAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F3CBBC25C20C9200D7577F /* CoinAPI.swift */; };
-		06F3CBD425C20D7400D7577F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F3CBD325C20D7400D7577F /* SceneDelegate.swift */; };
 		18257CD4DE905496ED38CBB9 /* Pods_CriptonitaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9E208CBF875577C7E16C52 /* Pods_CriptonitaTests.framework */; };
 		77CB0343776E9264BE6D155F /* Pods_Criptonita.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC0431A6F73C30A165DCE8E /* Pods_Criptonita.framework */; };
 		A424659AD444FA897D544731 /* Pods_Criptonita_CriptonitaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5233A9865D5FFFEAF118F74 /* Pods_Criptonita_CriptonitaUITests.framework */; };
@@ -50,7 +49,6 @@
 /* Begin PBXFileReference section */
 		06F3CBB625C20C7600D7577F /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
 		06F3CBBC25C20C9200D7577F /* CoinAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinAPI.swift; sourceTree = "<group>"; };
-		06F3CBD325C20D7400D7577F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0761F74D716A00BF5D3A6102 /* Pods-Criptonita-CriptonitaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Criptonita-CriptonitaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Criptonita-CriptonitaUITests/Pods-Criptonita-CriptonitaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		14AFA684EF8C250002BEC428 /* Pods-CriptonitaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CriptonitaTests.debug.xcconfig"; path = "Target Support Files/Pods-CriptonitaTests/Pods-CriptonitaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		161572F2DD67BDDB2B741223 /* Pods-Criptonita-CriptonitaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Criptonita-CriptonitaUITests.release.xcconfig"; path = "Target Support Files/Pods-Criptonita-CriptonitaUITests/Pods-Criptonita-CriptonitaUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -255,7 +253,6 @@
 		F017CAB725BB0D2F00B1CDF2 /* Aplication */ = {
 			isa = PBXGroup;
 			children = (
-				06F3CBD325C20D7400D7577F /* SceneDelegate.swift */,
 				F017CA7A25BB0CDD00B1CDF2 /* AppDelegate.swift */,
 				F017CA8825BB0CDF00B1CDF2 /* LaunchScreen.storyboard */,
 			);
@@ -509,7 +506,6 @@
 				F0D1521B25C341D8003D117C /* MoedaCelulaViewModel.swift in Sources */,
 				F017CA7B25BB0CDD00B1CDF2 /* AppDelegate.swift in Sources */,
 				F03A1DDC25C03DDF00617973 /* CriptoMoeda.swift in Sources */,
-				06F3CBD425C20D7400D7577F /* SceneDelegate.swift in Sources */,
 				06F3CBBD25C20C9200D7577F /* CoinAPI.swift in Sources */,
 				06F3CBB725C20C7600D7577F /* CoinModel.swift in Sources */,
 				F017CABF25BB0EEB00B1CDF2 /* ViewConfiguration.swift in Sources */,
