@@ -7,9 +7,9 @@ public class Detalhes {
         self.nc = navigationController
         
     }
-    public func abreDetalhes(initials:String,currentValueOFCoin:String, isFavorite:Bool, hourSell:String, monthSell:String, yearSell:String) {
+    public func abreDetalhes(initials:String,currentValueOFCoin:Double, isFavorite:Bool, hourSell:Double, daySell:Double, monthSell:Double, image:UIImage) {
     
-        let viewModel = TelaDeDetalhesViewModel(initials, currentValueOFCoin, isFavorite, hourSell, monthSell, yearSell)
+        let viewModel = TelaDeDetalhesViewModel(initials, currentValueOFCoin, isFavorite, hourSell, daySell, monthSell, image)
         let tela = TelaDeDetalhesViewController(viewModel: viewModel)
         
         if #available(iOS 10.0, *) {

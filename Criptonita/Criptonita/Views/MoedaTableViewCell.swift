@@ -17,12 +17,13 @@ class MoedaTableViewCell:UITableViewCell {
     var labelValor:UILabel!
     var labelSigla:UILabel!
     var imagemPlace:UIImageView!
+    var moedaDados:ModelCoinElement!
     
     init(_ moeda:ModelCoinElement, style:UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         celulaStyle()
         dadosConfiguracao(moeda)
-        
+        self.moedaDados = moeda
       
     }
     required init?(coder: NSCoder) {
@@ -64,6 +65,7 @@ class MoedaTableViewCell:UITableViewCell {
     }
     
     func dadosConfiguracao(_ moeda:ModelCoinElement){
+        
         
         if let nome = moeda.name  {
             self.labelNome.text = nome

@@ -43,7 +43,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }()
     
     private lazy var celulaItem:UILabel = criarLabel("Testando")
-
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
@@ -57,16 +56,18 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = true
+
+//        self.navigationController?.isNavigationBarHidden = true
     }
     
     //MARK: - Methods
     func configuraViewModel() {
         
         viewModel.criarDadosCelula(tableView)
+ 
         guard let navControl = self.navigationController else { return }
         viewModel.escolherNavControl(navControl)
-        
+
     }
     func statusBarBackgroundColor() {
         
@@ -77,7 +78,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func configuraNavgationBar() {
-       self.navigationController?.navigationBar.barTintColor = .black
+        self.navigationController?.navigationBar.barTintColor = .black
         self.navigationController?.navigationBar.tintColor = .white
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -110,7 +111,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var celula = viewModel.arrayFiltrados[indexPath.row]
+        let celula = viewModel.arrayFiltrados[indexPath.row]
         
         return celula
     }
@@ -118,8 +119,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return 60
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let celula = viewModel.arrayFiltrados[indexPath.row]
         
-        //viewModel.abrirDetalhes(moeda: coins)
+        viewModel.abrirDetalhes(moeda: celula.moedaDados, imagem: celula.imagemPlace.image!)
         
     }
     

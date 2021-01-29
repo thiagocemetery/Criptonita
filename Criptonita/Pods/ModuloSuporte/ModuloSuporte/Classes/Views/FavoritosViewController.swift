@@ -142,7 +142,7 @@ extension FavoritosViewController: UICollectionViewDelegateFlowLayout, UICollect
         guard let nc = self.navigationController else {return}
 
         let vcDetails = Detalhes(navigationController: nc)
-        vcDetails.abreDetalhes(initials: "BTC", currentValueOFCoin: "31,010.20", isFavorite: false, hourSell: "310,010.20", monthSell: "1,310.010.20", yearSell: "100,310.010.20")
+        vcDetails.abreDetalhes(initials: "BTC", currentValueOFCoin: 31010.20, isFavorite: false, hourSell: 310010.20, daySell: 1310010.20, monthSell: 100310010.20, image: UIImage())
         nc.isNavigationBarHidden = false
     }
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

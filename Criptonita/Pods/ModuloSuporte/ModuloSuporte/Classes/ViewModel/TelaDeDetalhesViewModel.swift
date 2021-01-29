@@ -10,13 +10,13 @@ import Foundation
 public class TelaDeDetalhesViewModel {
     
     var initials:String
-    var currentValueOFCoin:String
+    var currentValueOFCoin:Double
     var isFavorite:Bool
-    var hourSell:String
-    var monthSell:String
-    var yearSell:String
+    var hourSell:Double
+    var monthSell:Double
+    var yearSell:Double
     
-    init(_ initials:String, _ currentValueOFCoin:String,_ isFavorite:Bool,_ hourSell:String,_ monthSell:String,_ yearSell:String) {
+    init(_ initials:String, _ currentValueOFCoin:Double,_ isFavorite:Bool,_ hourSell:Double,_ monthSell:Double,_ yearSell:Double, _ image:UIImage) {
         self.currentValueOFCoin = currentValueOFCoin
         self.isFavorite = isFavorite
         self.monthSell = monthSell

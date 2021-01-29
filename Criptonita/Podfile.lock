@@ -24,7 +24,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   ModuloSuporte:
-    :commit: 52e737e94f7c9578f60e9609979003162e4ae757
+    :commit: 7f5fd54504f65956bf54766035b351ca0456c885
     :git: https://github.com/bittencourthiago/ModuloSuporte.git
 
 SPEC CHECKSUMS:

@@ -10,7 +10,7 @@ import UIKit
 import ModuloSuporte
 
 class HomeViewModel {
-    var navigationController:UINavigationController!
+    var navigationController:UINavigationController = UINavigationController()
     var moedas:ModelCoin=[]
     var celulasMoedas:[MoedaTableViewCell] = []
     var tableView:UITableView!
@@ -18,11 +18,21 @@ class HomeViewModel {
     
     func escolherNavControl(_ navControl:UINavigationController) {
         self.navigationController = navControl
+        
     }
-    func abrirDetalhes(moeda:CriptoMoeda) {
+    func abrirDetalhes(moeda:ModelCoinElement, imagem:UIImage) {
         
         let newViewCOntroller = Detalhes(navigationController: self.navigationController)
-        newViewCOntroller.abreDetalhes(initials:moeda.sigla, currentValueOFCoin: moeda.valorAtual, isFavorite: false, hourSell: moeda.vendaHora, monthSell: moeda.vendaMes, yearSell: moeda.vendaAno)
+        
+        guard let initials = moeda.assetID else { return }
+        
+        guard let currentValueOFCoin = moeda.priceUsd else { return }
+        guard let hourSell = moeda.volume1HrsUsd else { return }
+        guard let monthSell = moeda.volume1DayUsd else { return }
+        guard let yearSell = moeda.volume1MthUsd else { return }
+        
+        
+        newViewCOntroller.abreDetalhes(initials: initials, currentValueOFCoin: currentValueOFCoin, isFavorite: false, hourSell: hourSell, daySell: monthSell, monthSell: yearSell, image: imagem)
     }
     func criarDadosCelula(_ tv:UITableView){
         CoinAPI().downloadJSON { (coins) in

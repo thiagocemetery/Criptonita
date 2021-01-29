@@ -30,9 +30,10 @@ class TelaDeDetalhesViewController: UIViewController {
         label.font = UIFont.systemFont(ofSize: 30, weight: .light)
         label.textAlignment = .center
         label.textColor = .white
-        label.text = "$ \(viewModel.currentValueOFCoin)"
+        label.text = String(format: "$ %.3f", viewModel.currentValueOFCoin)
         return label
     }()
+    private lazy var imagemPlace = UIImageView(frame: CGRect(x: 0, y: 5, width: 50, height: 50))
     private lazy var centralButton: UIButton = {
 
         let button = UIButton(frame: CGRect(x: 100, y: 100, width: 90, height: 20))
@@ -56,15 +57,15 @@ class TelaDeDetalhesViewController: UIViewController {
     private lazy var bodyTitleLabel: UILabel = defaultLabelValues(text:"volumes negociados", fontSize: 23)
     
     private lazy var hourTitleLabel: UILabel = defaultLabelValues(text: "última hora")
-    private lazy var hourValueTitleLabel: UILabel = defaultLabelValues(text: "$ \(viewModel.hourSell)")
+    private lazy var hourValueTitleLabel: UILabel = defaultLabelValues(text: String(format: "$ %.3f", viewModel.hourSell))
     
     
-    private lazy var monthTitleLabel: UILabel = defaultLabelValues(text: "último mês")
-    private lazy var monthValueTitleLabel: UILabel = defaultLabelValues(text: "$ \(viewModel.monthSell)")
+    private lazy var monthTitleLabel: UILabel = defaultLabelValues(text: "último dia")
+    private lazy var monthValueTitleLabel: UILabel = defaultLabelValues(text: String(format: "$ %.3f", viewModel.monthSell))
     
     
-    private lazy var yearTitleLabel: UILabel = defaultLabelValues(text: "último ano")
-    private lazy var yearValueTitleLabel: UILabel = defaultLabelValues(text: "$ \(viewModel.yearSell)")
+    private lazy var yearTitleLabel: UILabel = defaultLabelValues(text: "último mês")
+    private lazy var yearValueTitleLabel: UILabel = defaultLabelValues(text: String(format: "$ %.3f", viewModel.yearSell))
     
     
     // MARK: - Constructor
@@ -120,7 +121,9 @@ extension TelaDeDetalhesViewController: ViewConfiguration {
         
         view.addSubview(headerContainerView)
         headerContainerView.addSubview(headerTitleLabel)
+        headerContainerView.addSubview(imagemPlace)
         headerContainerView.addSubview(centralButton)
+    
         
         view.addSubview(bodyTitleLabel)
         
@@ -149,6 +152,11 @@ extension TelaDeDetalhesViewController: ViewConfiguration {
             make.left.equalTo(headerContainerView).offset(20)
             make.right.equalTo(headerContainerView).inset(20)
             
+        }
+        imagemPlace.snp.makeConstraints { (make) in
+            make.top.equalTo(headerContainerView.snp.top).offset(30)
+            make.left.equalTo(headerContainerView).offset(20)
+            make.right.equalTo(headerContainerView).inset(20)
         }
         centralButton.snp.makeConstraints { (make) in
             make.top.equalTo(headerContainerView).offset(200)
