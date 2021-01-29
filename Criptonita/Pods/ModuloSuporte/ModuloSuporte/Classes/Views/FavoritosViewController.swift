@@ -9,6 +9,9 @@ import UIKit
 import SnapKit
 
 public class FavoritosViewController: UIViewController {
+    //MARK: - atributes
+    var defaults = UserDefaults.standard
+    var viewModel = FavoritosViewModel()
     
     //MARK: - Criando a tela
     
@@ -58,6 +61,12 @@ public class FavoritosViewController: UIViewController {
 
     public override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
+        if let celulas = UserDefaults.standard.value(forKey: "celulas") {
+            print(celulas)
+        } else {
+            print("Vazio")
+        }
+
     }
     
     public override func viewDidLoad() {
@@ -128,15 +137,21 @@ extension FavoritosViewController: UICollectionViewDelegateFlowLayout, UICollect
      }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 26
+        
+        guard let favoritos  = defaults.value(forKey: "favoritos") as? [String] else { return 0 }
+        
+        return favoritos.count
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CellCollectionViewCell
-        cell.layer.cornerRadius = 15
-        cell.backgroundColor = UIColor(red: 139/255, green: 153/255, blue: 90/255, alpha: 1)
+        
         return cell
+    
     }
+    
+    
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         guard let nc = self.navigationController else {return}

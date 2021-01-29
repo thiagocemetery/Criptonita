@@ -30,18 +30,15 @@ class MainTabBarViewController: UITabBarController {
         
         let vc1 = HomeViewController()
         let vc2 = FavoritosViewController()
-        
+
         let nc1 = UINavigationController(rootViewController: vc1)
         let nc2 = UINavigationController(rootViewController: vc2)
-        
-        
+                
         vc1.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home_icon"), tag: 1)
         vc2.tabBarItem = UITabBarItem(title: "Favoritos", image: UIImage(named: "star_icon"), tag: 2)
 
         viewControllers = [nc1, nc2]
         setViewControllers(viewControllers, animated: true)
-        
-        
         
         // backGround for tapBarView
         tabBar.barTintColor = .black

@@ -15,7 +15,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //MARK: - Atributes
     let viewModel = HomeViewModel()
     var tableView = UITableView()
-    var coins: ModelCoin = []
     
     private lazy var headerView: UIView = {
         let view = UIView()
