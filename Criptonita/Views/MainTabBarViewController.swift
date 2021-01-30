@@ -10,7 +10,7 @@ import ModuloSuporte
 
 class MainTabBarViewController: UITabBarController {
 
-    //MARK: - Constructor
+    // MARK: - Constructor
     init() {
         super.init(nibName: "MainTabBarViewController", bundle: nil)
     }
