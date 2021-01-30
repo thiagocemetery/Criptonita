@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import UIKit	
+import UIKit
 import ModuloSuporte
 
 class HomeViewModel {

@@ -28,14 +28,14 @@ class CoinAPI: CoinAPIProtocol {
     func downloadJSON(completion: @escaping (ModelCoin) -> Void) {
     Alamofire.request(APIData.urlAssetBTC, method: .get).responseJSON { (response) in
         switch response.result {
-            case .success:
+        case .success:
                 do {
                 guard let data = response.data else { return }
                 let coinRecovered = try JSONDecoder().decode(ModelCoin.self, from: data)
                 let filterCripto = coinRecovered.filter {$0.type_is_crypto == 1}
                 let filterNil = filterCripto.filter {$0.priceUsd != nil}
-                completion(filterNil) }
-            catch {
+                completion(filterNil)
+                    } catch {
                         if let errorCode = response.response?.statusCode {
                         if errorCode == 400 {
                         print("Bad Request -- There is something wrong with your request")}
@@ -52,13 +52,11 @@ class CoinAPI: CoinAPIProtocol {
                         print("No data -- You requested specific single item that we don't have at this moment.")
                             }
                         }
-                    }
-                    //break
-            case .failure:
+                        }
+        case .failure :
                 print("error 404")
             }
         }
-
     }
 
   }

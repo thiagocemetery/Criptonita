@@ -26,9 +26,7 @@ class MoedaTableViewCell:UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     func celulaStyle() {
-        
         let tamanhoDaTela = UIScreen.main.bounds
         let larguraDaCelula = tamanhoDaTela.width
         let alturaDaCelula = 60
@@ -77,9 +75,7 @@ class MoedaTableViewCell:UITableViewCell {
                 self.imagemPlace.af_setImage(withURL: recoveredUrl, placeholderImage: UIImage(named: "coins_icon"))
         }
         } else {
-
             self.imagemPlace.image = UIImage(named: "coins_icon")
-
     }
     }
     }

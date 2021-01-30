@@ -89,7 +89,7 @@ class TelaDeDetalhesViewController: UIViewController {
         self.imagemPlace.image = viewModel.image
     }
     
-    func defaultLabelValues(text:String, fontSize:CGFloat = 18) -> UILabel {
+    func defaultLabelValues(text:String, fontSize:CGFloat = 17) -> UILabel {
         
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: fontSize, weight: .light)
