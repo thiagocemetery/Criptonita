@@ -9,18 +9,15 @@ import Foundation
 import UIKit
 
 class CriptoMoeda {
-    
-    var nome:String
-    var valorAtual:String
-    var sigla:String
-    var imagem:UIImage
-    var isFavorite:Bool
-    var vendaHora:String
-    var vendaMes:String
-    var vendaAno:String
-    
-    init(nome:String, valorAtual:String, sigla:String, imagem:UIImage, vendaHora:String, vendaMes:String, vendaAno:String) {
-        
+    var nome: String
+    var valorAtual: String
+    var sigla: String
+    var imagem: UIImage
+    var isFavorite: Bool
+    var vendaHora: String
+    var vendaMes: String
+    var vendaAno: String
+    init(nome: String, valorAtual: String, sigla: String, imagem: UIImage, vendaHora: String, vendaMes: String, vendaAno: String) {
         self.nome = nome
         self.valorAtual = valorAtual
         self.sigla = sigla
@@ -29,6 +26,5 @@ class CriptoMoeda {
         self.vendaHora = vendaHora
         self.vendaMes = vendaMes
         self.vendaAno = vendaAno
-        
     }
 }

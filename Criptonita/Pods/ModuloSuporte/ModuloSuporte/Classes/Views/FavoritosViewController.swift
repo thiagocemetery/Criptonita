@@ -9,6 +9,10 @@ import UIKit
 import SnapKit
 
 public class FavoritosViewController: UIViewController {
+    //MARK: - atributes
+    var defaults = UserDefaults.standard
+    var dados:[[String:Any]] = [[:]]
+    var viewModel = FavoritosViewModel()
     
     //MARK: - Criando a tela
     
@@ -47,7 +51,7 @@ public class FavoritosViewController: UIViewController {
         collectionView.collectionViewLayout = layout
         collectionView.backgroundColor = .black
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.register(CellCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(MoedasFavoritasCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -58,14 +62,16 @@ public class FavoritosViewController: UIViewController {
 
     public override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
+        
+
     }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         setupViewConfiguration()
-    }
+    }  
     
-    
+    //MARK: - Methods
     
 }
 
@@ -125,18 +131,26 @@ extension FavoritosViewController: UICollectionViewDelegateFlowLayout, UICollect
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
         return UIDevice.current.userInterfaceIdiom == .phone ? CGSize(width: collectionView.bounds.width/2-40, height: 130) : CGSize(width: collectionView.bounds.width/3-20, height: 250)
-     }
+    }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 26
+        
+        return dados.count
     }
     
+    
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CellCollectionViewCell
-        cell.layer.cornerRadius = 15
-        cell.backgroundColor = UIColor(red: 139/255, green: 153/255, blue: 90/255, alpha: 1)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MoedasFavoritasCollectionViewCell
+        
+        
+
+        //let cell = viewModel.arrayDeCelulas[indexPath.row]
+        
         return cell
+    
     }
+    
+    
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         guard let nc = self.navigationController else {return}
