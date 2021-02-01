@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import AlamofireImage
 struct CelulaStyle {
     var fontColor:UIColor = .white
 }
