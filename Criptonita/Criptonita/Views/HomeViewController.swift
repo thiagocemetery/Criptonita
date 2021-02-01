@@ -25,7 +25,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         view.backgroundColor = UIColor(red:0.15, green:0.15, blue:0.15, alpha:1.0)
         return view
     }()
-    private lazy var titleLabel: UILabel = criarLabel("Moeda Digital")
+    private lazy var titleLabel: UILabel = criarLabel("Criptonita")
     private lazy var dateLabel: UILabel = criarLabel("4 jan 2020", size: 15)
     private lazy var searchBar: UISearchBar = {
         var searchBar = UISearchBar()
@@ -46,12 +46,19 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         configuraNavgationBar()
         statusBarBackgroundColor()
         configuraViewModel()
+        getCurrentTime()
     }
     override func viewWillAppear(_ animated: Bool) {
 
 //        self.navigationController?.isNavigationBarHidden = true
     }
     // MARK: - Methods
+    func getCurrentTime() {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd MMM yyyy"
+            let str = formatter.string(from: Date())
+            dateLabel.text = str
+        }
     func configuraViewModel() {
         viewModel.criarDadosCelula(tableView)
         guard let navControl = self.navigationController else { return }

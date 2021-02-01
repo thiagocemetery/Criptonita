@@ -65,7 +65,7 @@ class MoedaTableViewCell:UITableViewCell {
             self.labelSigla.text = "---"
         }
         if let value = moeda.priceUsd {
-            self.labelValor.text = String(format: "$ %.3f", value)
+            self.labelValor.text = String(format: "$ %.3f", locale: Locale.current, Double(value))
         } else {
             self.labelValor.text = "0"
         }
