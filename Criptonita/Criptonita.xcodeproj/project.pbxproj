@@ -21,7 +21,6 @@
 		F017CA9525BB0CE000B1CDF2 /* CriptonitaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017CA9425BB0CE000B1CDF2 /* CriptonitaTests.swift */; };
 		F017CAA025BB0CE000B1CDF2 /* CriptonitaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017CA9F25BB0CE000B1CDF2 /* CriptonitaUITests.swift */; };
 		F017CABF25BB0EEB00B1CDF2 /* ViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017CABE25BB0EEB00B1CDF2 /* ViewConfiguration.swift */; };
-		F03A1DDC25C03DDF00617973 /* CriptoMoeda.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03A1DDB25C03DDF00617973 /* CriptoMoeda.swift */; };
 		F03A1DE425C04BE900617973 /* MoedaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03A1DE325C04BE900617973 /* MoedaTableViewCell.swift */; };
 		F08C5F0825BCBC2F002561C0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08C5F0725BCBC2F002561C0 /* HomeViewModel.swift */; };
 		F0D1512925C2FBA1003D117C /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D1512725C2FBA1003D117C /* MainTabBarViewController.swift */; };
@@ -71,7 +70,6 @@
 		F017CA9F25BB0CE000B1CDF2 /* CriptonitaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptonitaUITests.swift; sourceTree = "<group>"; };
 		F017CAA125BB0CE000B1CDF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F017CABE25BB0EEB00B1CDF2 /* ViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
-		F03A1DDB25C03DDF00617973 /* CriptoMoeda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoMoeda.swift; sourceTree = "<group>"; };
 		F03A1DE325C04BE900617973 /* MoedaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaTableViewCell.swift; sourceTree = "<group>"; };
 		F08C5F0725BCBC2F002561C0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F0D1512725C2FBA1003D117C /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTabBarViewController.swift; path = Views/MainTabBarViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -206,7 +204,6 @@
 		F017CAB425BB0D1800B1CDF2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F03A1DDB25C03DDF00617973 /* CriptoMoeda.swift */,
 				06F3CBB625C20C7600D7577F /* CoinModel.swift */,
 			);
 			path = Models;
@@ -503,7 +500,6 @@
 				F0D1512925C2FBA1003D117C /* MainTabBarViewController.swift in Sources */,
 				F017CA7F25BB0CDD00B1CDF2 /* HomeViewController.swift in Sources */,
 				F017CA7B25BB0CDD00B1CDF2 /* AppDelegate.swift in Sources */,
-				F03A1DDC25C03DDF00617973 /* CriptoMoeda.swift in Sources */,
 				06F3CBBD25C20C9200D7577F /* CoinAPI.swift in Sources */,
 				06F3CBB725C20C7600D7577F /* CoinModel.swift in Sources */,
 				F017CABF25BB0EEB00B1CDF2 /* ViewConfiguration.swift in Sources */,

@@ -37,6 +37,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return searchBar
     }()
     private lazy var celulaItem:UILabel = criarLabel("Testando")
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,10 +48,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         statusBarBackgroundColor()
         configuraViewModel()
     }
-    override func viewWillAppear(_ animated: Bool) {
 
-//        self.navigationController?.isNavigationBarHidden = true
-    }
     // MARK: - Methods
     func configuraViewModel() {
         viewModel.criarDadosCelula(tableView)
