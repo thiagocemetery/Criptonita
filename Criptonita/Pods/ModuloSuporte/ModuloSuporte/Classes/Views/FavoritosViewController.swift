@@ -11,6 +11,7 @@ import SnapKit
 public class FavoritosViewController: UIViewController {
     //MARK: - atributes
     var defaults = UserDefaults.standard
+    var dados:[[String:Any]] = [[:]]
     var viewModel = FavoritosViewModel()
     
     //MARK: - Criando a tela
@@ -50,7 +51,7 @@ public class FavoritosViewController: UIViewController {
         collectionView.collectionViewLayout = layout
         collectionView.backgroundColor = .black
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.register(CellCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(MoedasFavoritasCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -61,20 +62,16 @@ public class FavoritosViewController: UIViewController {
 
     public override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
-        if let celulas = UserDefaults.standard.value(forKey: "celulas") {
-            print(celulas)
-        } else {
-            print("Vazio")
-        }
+        
 
     }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         setupViewConfiguration()
-    }
+    }  
     
-    
+    //MARK: - Methods
     
 }
 
@@ -134,18 +131,20 @@ extension FavoritosViewController: UICollectionViewDelegateFlowLayout, UICollect
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
         return UIDevice.current.userInterfaceIdiom == .phone ? CGSize(width: collectionView.bounds.width/2-40, height: 130) : CGSize(width: collectionView.bounds.width/3-20, height: 250)
-     }
+    }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        guard let favoritos  = defaults.value(forKey: "favoritos") as? [String] else { return 0 }
-        
-        return favoritos.count
+        return dados.count
     }
     
-    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CellCollectionViewCell
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MoedasFavoritasCollectionViewCell
+        
+        
+
+        //let cell = viewModel.arrayDeCelulas[indexPath.row]
         
         return cell
     

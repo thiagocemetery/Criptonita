@@ -18,6 +18,7 @@ public class TelaDeDetalhesViewModel {
     var monthSell:Double
     var yearSell:Double
     var favoritos:[String]
+    var image:UIImage
     
     init(_ initials:String, _ currentValueOFCoin:Double,_ isFavorite:Bool,_ hourSell:Double,_ monthSell:Double,_ yearSell:Double, _ image:UIImage) {
         self.currentValueOFCoin = currentValueOFCoin
@@ -26,6 +27,7 @@ public class TelaDeDetalhesViewModel {
         self.hourSell = hourSell
         self.yearSell = yearSell
         self.initials = initials
+        self.image = image
         if let favoritos = defaults.value(forKey: "favoritos") as? [String] {
             self.favoritos = favoritos
             if favoritos.contains(initials) {

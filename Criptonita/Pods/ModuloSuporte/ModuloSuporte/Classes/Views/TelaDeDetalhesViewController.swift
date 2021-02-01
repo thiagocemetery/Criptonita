@@ -30,7 +30,7 @@ class TelaDeDetalhesViewController: UIViewController {
         label.font = UIFont.systemFont(ofSize: 30, weight: .light)
         label.textAlignment = .center
         label.textColor = .white
-        label.text = String(format: "$ %.3f", viewModel.currentValueOFCoin)
+        label.text = String(format: "$ %.3f", locale: Locale.current, Double(viewModel.currentValueOFCoin))
         return label
     }()
     private lazy var imagemPlace = UIImageView(frame: CGRect(x: 0, y: 5, width: 50, height: 50))
@@ -57,15 +57,15 @@ class TelaDeDetalhesViewController: UIViewController {
     private lazy var bodyTitleLabel: UILabel = defaultLabelValues(text:"volumes negociados", fontSize: 23)
     
     private lazy var hourTitleLabel: UILabel = defaultLabelValues(text: "última hora")
-    private lazy var hourValueTitleLabel: UILabel = defaultLabelValues(text: String(format: "$ %.3f", viewModel.hourSell))
+    private lazy var hourValueTitleLabel: UILabel = defaultLabelValues(text: String(format: "$ %.3f", locale: Locale.current, Double(viewModel.hourSell)))
     
     
     private lazy var monthTitleLabel: UILabel = defaultLabelValues(text: "último dia")
-    private lazy var monthValueTitleLabel: UILabel = defaultLabelValues(text: String(format: "$ %.3f", viewModel.monthSell))
+    private lazy var monthValueTitleLabel: UILabel = defaultLabelValues(text: String(format: "$ %.3f", locale: Locale.current, Double(viewModel.monthSell)))
     
     
     private lazy var yearTitleLabel: UILabel = defaultLabelValues(text: "último mês")
-    private lazy var yearValueTitleLabel: UILabel = defaultLabelValues(text: String(format: "$ %.3f", viewModel.yearSell))
+    private lazy var yearValueTitleLabel: UILabel = defaultLabelValues(text: String(format: "$ %.3f", locale: Locale.current, Double(viewModel.yearSell)))
     
     
     // MARK: - Constructor
@@ -86,9 +86,10 @@ class TelaDeDetalhesViewController: UIViewController {
         super.viewDidLoad()
         setupViewConfiguration()
         self.title = "\(viewModel.initials)"
+        self.imagemPlace.image = viewModel.image
     }
     
-    func defaultLabelValues(text:String, fontSize:CGFloat = 18) -> UILabel {
+    func defaultLabelValues(text:String, fontSize:CGFloat = 17) -> UILabel {
         
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: fontSize, weight: .light)
@@ -154,9 +155,10 @@ extension TelaDeDetalhesViewController: ViewConfiguration {
             
         }
         imagemPlace.snp.makeConstraints { (make) in
-            make.top.equalTo(headerContainerView.snp.top).offset(30)
-            make.left.equalTo(headerContainerView).offset(20)
-            make.right.equalTo(headerContainerView).inset(20)
+            make.top.equalTo(headerContainerView.snp.top).offset(60)
+            make.centerX.equalTo(headerContainerView)
+            make.height.equalTo(50)
+            make.width.equalTo(50)
         }
         centralButton.snp.makeConstraints { (make) in
             make.top.equalTo(headerContainerView).offset(200)
@@ -216,3 +218,4 @@ extension TelaDeDetalhesViewController: ViewConfiguration {
     }
     
 }
+

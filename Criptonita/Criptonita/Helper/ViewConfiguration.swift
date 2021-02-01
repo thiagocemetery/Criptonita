@@ -15,12 +15,10 @@ protocol ViewConfiguration: class {
 }
 
 extension ViewConfiguration {
-    
     func setupViewConfiguration() {
         buildViewHierarchy()
         setupConstraints()
         configureViews()
     }
-    
     func configureViews() { }
 }
