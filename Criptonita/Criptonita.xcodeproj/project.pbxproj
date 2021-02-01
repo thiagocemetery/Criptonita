@@ -168,9 +168,7 @@
 				F017CAB625BB0D2700B1CDF2 /* Views */,
 				F017CAB525BB0D1F00B1CDF2 /* ViewModels */,
 				F017CAB425BB0D1800B1CDF2 /* Models */,
-				F017CAB325BB0D1100B1CDF2 /* Core */,
 				F017CAB125BB0D0400B1CDF2 /* Helper */,
-				F017CAB025BB0CEA00B1CDF2 /* Resources */,
 				F017CA8025BB0CDD00B1CDF2 /* Main.storyboard */,
 				F017CA8625BB0CDF00B1CDF2 /* Assets.xcassets */,
 				F017CA8B25BB0CDF00B1CDF2 /* Info.plist */,
@@ -197,26 +195,12 @@
 			path = CriptonitaUITests;
 			sourceTree = "<group>";
 		};
-		F017CAB025BB0CEA00B1CDF2 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		F017CAB125BB0D0400B1CDF2 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
 				F017CABE25BB0EEB00B1CDF2 /* ViewConfiguration.swift */,
 			);
 			path = Helper;
-			sourceTree = "<group>";
-		};
-		F017CAB325BB0D1100B1CDF2 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 		F017CAB425BB0D1800B1CDF2 /* Models */ = {

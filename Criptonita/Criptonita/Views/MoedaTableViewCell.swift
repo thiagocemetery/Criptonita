@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 struct CelulaStyle {
     var fontColor:UIColor = .white
-    }
+}
 
 class MoedaTableViewCell:UITableViewCell {
     var labelNome: UILabel!
@@ -52,7 +52,7 @@ class MoedaTableViewCell:UITableViewCell {
         let fundoHighlighted = UIView()
         fundoHighlighted.backgroundColor = UIColor.darkGray
         self.selectedBackgroundView = fundoHighlighted
-        }
+    }
     func dadosConfiguracao(_ moeda:ModelCoinElement) {
         if let nome = moeda.name {
             self.labelNome.text = nome
@@ -76,6 +76,6 @@ class MoedaTableViewCell:UITableViewCell {
         }
         } else {
             self.imagemPlace.image = UIImage(named: "coins_icon")
+        }
     }
-    }
-    }
+}
