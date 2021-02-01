@@ -10,11 +10,13 @@ import UIKit
 import ModuloSuporte
 
 class HomeViewModel {
+    //MARK: - Attributes
     var navigationController: UINavigationController = UINavigationController()
     var moedas:ModelCoin = []
     var celulasMoedas:[MoedaTableViewCell] = []
     var tableView: UITableView!
     var arrayFiltrados: [MoedaTableViewCell] = []
+    //MARK: - Methods
     func escolherNavControl(_ navControl: UINavigationController) {
         self.navigationController = navControl
     }
