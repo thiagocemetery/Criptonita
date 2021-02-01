@@ -7,8 +7,6 @@
 
 import UIKit
 import SnapKit
-import CoreData
-import AlamofireImage
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITabBarDelegate, UISearchBarDelegate {
     // MARK: - Atributes
@@ -48,10 +46,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         configuraViewModel()
         getCurrentTime()
     }
-    override func viewWillAppear(_ animated: Bool) {
 
-//        self.navigationController?.isNavigationBarHidden = true
-    }
     // MARK: - Methods
     func getCurrentTime() {
             let formatter = DateFormatter()
@@ -63,7 +58,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         viewModel.criarDadosCelula(tableView)
         guard let navControl = self.navigationController else { return }
         viewModel.escolherNavControl(navControl)
-
     }
     func statusBarBackgroundColor() {
         let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.size.width, height: 20.0))
