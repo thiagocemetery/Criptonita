@@ -33,6 +33,7 @@ class HomeViewModel {
                 self.celulasMoedas.append(MoedaTableViewCell(moeda, style: .default, reuseIdentifier: "cell"))
                 self.arrayFiltrados = self.celulasMoedas
             }
+            
             tv.reloadData()
         }
     }
@@ -45,6 +46,8 @@ class HomeViewModel {
                 return searchCoin
             }
             arrayFiltrados = filtradas
+            
+            
         }
     }
 }
