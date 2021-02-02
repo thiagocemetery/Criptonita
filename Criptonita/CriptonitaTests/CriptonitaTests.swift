@@ -9,6 +9,7 @@ import XCTest
 @testable import Criptonita
 
 class CriptonitaTests: XCTestCase {
+    let homeViewModel = HomeViewModel()
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -41,14 +42,10 @@ class CriptonitaTests: XCTestCase {
         XCTAssertNotNil(coin)
     }
     func testVerificaSeAbreNavigationControllerSelecionado() {
-        let homeViewModel = HomeViewModel()
+        
         let navControll = UINavigationController()
         homeViewModel.escolherNavControl(navControll)
         XCTAssertEqual(homeViewModel.navigationController, navControll)
-        
-    }
-    func testVariaveisDeAbrirDetalhes() {
-
         
     }
 }

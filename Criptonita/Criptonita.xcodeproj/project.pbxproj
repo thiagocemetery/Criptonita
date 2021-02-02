@@ -23,6 +23,7 @@
 		F017CABF25BB0EEB00B1CDF2 /* ViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F017CABE25BB0EEB00B1CDF2 /* ViewConfiguration.swift */; };
 		F03A1DE425C04BE900617973 /* MoedaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03A1DE325C04BE900617973 /* MoedaTableViewCell.swift */; };
 		F08C5F0825BCBC2F002561C0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08C5F0725BCBC2F002561C0 /* HomeViewModel.swift */; };
+		F0AFB0A025C987EC00BA5D38 /* MySearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AFB09F25C987EC00BA5D38 /* MySearchBar.swift */; };
 		F0D1512925C2FBA1003D117C /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D1512725C2FBA1003D117C /* MainTabBarViewController.swift */; };
 		F0D1512A25C2FBA1003D117C /* MainTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0D1512825C2FBA1003D117C /* MainTabBarViewController.xib */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		F017CABE25BB0EEB00B1CDF2 /* ViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
 		F03A1DE325C04BE900617973 /* MoedaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaTableViewCell.swift; sourceTree = "<group>"; };
 		F08C5F0725BCBC2F002561C0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F0AFB09F25C987EC00BA5D38 /* MySearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySearchBar.swift; sourceTree = "<group>"; };
 		F0D1512725C2FBA1003D117C /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTabBarViewController.swift; path = Views/MainTabBarViewController.swift; sourceTree = SOURCE_ROOT; };
 		F0D1512825C2FBA1003D117C /* MainTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainTabBarViewController.xib; path = Views/MainTabBarViewController.xib; sourceTree = SOURCE_ROOT; };
 		F5AB5BC239A36DDA1F7EC6C1 /* Pods-Criptonita.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Criptonita.release.xcconfig"; path = "Target Support Files/Pods-Criptonita/Pods-Criptonita.release.xcconfig"; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				F03A1DE325C04BE900617973 /* MoedaTableViewCell.swift */,
 				F0D1512725C2FBA1003D117C /* MainTabBarViewController.swift */,
 				F0D1512825C2FBA1003D117C /* MainTabBarViewController.xib */,
+				F0AFB09F25C987EC00BA5D38 /* MySearchBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				F03A1DE425C04BE900617973 /* MoedaTableViewCell.swift in Sources */,
 				F08C5F0825BCBC2F002561C0 /* HomeViewModel.swift in Sources */,
 				F017CA8525BB0CDD00B1CDF2 /* Criptonita.xcdatamodeld in Sources */,
+				F0AFB0A025C987EC00BA5D38 /* MySearchBar.swift in Sources */,
 				F0D1512925C2FBA1003D117C /* MainTabBarViewController.swift in Sources */,
 				F017CA7F25BB0CDD00B1CDF2 /* HomeViewController.swift in Sources */,
 				F017CA7B25BB0CDD00B1CDF2 /* AppDelegate.swift in Sources */,

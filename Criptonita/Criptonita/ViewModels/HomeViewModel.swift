@@ -16,7 +16,12 @@ class HomeViewModel {
     var celulasMoedas:[MoedaTableViewCell] = []
     var tableView: UITableView!
     var arrayFiltrados: [MoedaTableViewCell] = []
-    //MARK: - Methods
+    var currentTime:String = ""
+    // MARK: - Constructor
+    init() {
+        getCurrentTime()
+    }
+    // MARK: - Methods
     func escolherNavControl(_ navControl: UINavigationController) {
         self.navigationController = navControl
     }
@@ -48,5 +53,10 @@ class HomeViewModel {
             }
             arrayFiltrados = filtradas
         }
+    }
+    func getCurrentTime() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMM yyyy"
+        self.currentTime = formatter.string(from: Date())
     }
 }

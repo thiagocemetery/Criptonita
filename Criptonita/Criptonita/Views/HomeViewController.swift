@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITabBarDelegate, UISearchBarDelegate {
+class HomeViewController: UIViewController, UITableViewDataSource, UITabBarDelegate, UISearchBarDelegate {
     // MARK: - Atributes
     let viewModel = HomeViewModel()
     var tableView = UITableView()
@@ -24,7 +24,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return view
     }()
     private lazy var titleLabel: UILabel = criarLabel("Criptonita")
-    private lazy var dateLabel: UILabel = criarLabel("4 jan 2020", size: 15)
+    private lazy var dateLabel: UILabel = criarLabel(viewModel.currentTime, size: 15)
     private lazy var searchBar: UISearchBar = {
         var searchBar = UISearchBar()
         searchBar.barTintColor = .black
@@ -44,16 +44,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         configuraNavgationBar()
         statusBarBackgroundColor()
         configuraViewModel()
-        getCurrentTime()
     }
 
     // MARK: - Methods
-    func getCurrentTime() {
-            let formatter = DateFormatter()
-            formatter.dateFormat = "dd MMM yyyy"
-            let str = formatter.string(from: Date())
-            dateLabel.text = str
-        }
     func configuraViewModel() {
         viewModel.criarDadosCelula(tableView)
         guard let navControl = self.navigationController else { return }
@@ -86,25 +79,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         label.textColor = .white
         label.text = text
         return label
-    }
-    // MARK: - TableView Delegate
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.arrayFiltrados.count
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let celula = viewModel.arrayFiltrados[indexPath.row]
-        return celula
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let celula = viewModel.arrayFiltrados[indexPath.row]
-        viewModel.abrirDetalhes(moeda: celula.moedaDados, imagem: celula.imagemPlace.image!)
-    }
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        viewModel.filtraCelulasMoedas(usertext: searchText)
-        tableView.reloadData()
     }
 }
 extension HomeViewController: ViewConfiguration {
@@ -155,14 +129,28 @@ extension HomeViewController: ViewConfiguration {
         view.backgroundColor = .black
     }
 }
-public extension UISearchBar {
 
-    func setNewcolor(color: UIColor) {
-        let clrChange = subviews.flatMap { $0.subviews }
-        guard let sc = (clrChange.filter { $0 is UITextField }).first as? UITextField else { return }
-        sc.textColor = color
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.arrayFiltrados.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let celula = viewModel.arrayFiltrados[indexPath.row]
+        return celula
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let celula = viewModel.arrayFiltrados[indexPath.row]
+        viewModel.abrirDetalhes(moeda: celula.moedaDados, imagem: celula.imagemPlace.image!)
+    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.filtraCelulasMoedas(usertext: searchText)
+        tableView.reloadData()
     }
 }
+
 class ThirtyDayCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
